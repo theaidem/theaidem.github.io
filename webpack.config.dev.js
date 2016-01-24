@@ -20,7 +20,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new HtmlWebpackPlugin({
-			title: 'stapp',
+			title: '@theaidem',
 			filename: 'index.html',
 			template: 'src/index.tpl',
 			favicon: path.join(__dirname, 'src', 'images', 'favicon.ico')
