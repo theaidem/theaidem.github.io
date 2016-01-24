@@ -1,12 +1,7 @@
 import '../styles/index.css'
 
-import React from 'react'
 import ReactDOM from 'react-dom'
-import { router } from "./constants/router"
-import { configureStore } from "./store/configureStore"
-import { Provider } from 'react-redux'
+import React from 'react'
+import Home from "./components/Home"
 
-const start = (store = configureStore()) => 
-	ReactDOM.render(<Provider store={store}>{ router }</Provider>, document.getElementById('stapp'))
-start()
-
+ReactDOM.render(<Home/>, document.getElementById('stapp'))
