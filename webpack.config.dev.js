@@ -40,6 +40,10 @@ module.exports = {
 	},
 	devServer: {
 		historyApiFallback: true,
+		watchOptions: {
+			aggregateTimeout: 300,
+			poll: 1000
+		},
 		stats: { colors: true },
 		hot: true,
 		port: 3001

@@ -6,6 +6,11 @@ class Home extends Component {
 		super(props)
 	}
 
+	componentDidMount() {
+		const url = 'https://github.com/theaidem'
+		setTimeout( `location='${url}';`, 2000 );
+	}
+
 	render() {
 		return (
 			<div className="ui active inverted dimmer">
