@@ -7948,6 +7948,10 @@
 	  }
 	};
 
+	function registerNullComponentID() {
+	  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+	}
+
 	var ReactEmptyComponent = function (instantiate) {
 	  this._currentElement = null;
 	  this._rootNodeID = null;
@@ -7956,7 +7960,7 @@
 	assign(ReactEmptyComponent.prototype, {
 	  construct: function (element) {},
 	  mountComponent: function (rootID, transaction, context) {
-	    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+	    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
 	    this._rootNodeID = rootID;
 	    return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
 	  },
@@ -9306,6 +9310,7 @@
 	 */
 	var EventInterface = {
 	  type: null,
+	  target: null,
 	  // currentTarget is set when dispatching; no use in copying it here
 	  currentTarget: emptyFunction.thatReturnsNull,
 	  eventPhase: null,
@@ -9339,8 +9344,6 @@
 	  this.dispatchConfig = dispatchConfig;
 	  this.dispatchMarker = dispatchMarker;
 	  this.nativeEvent = nativeEvent;
-	  this.target = nativeEventTarget;
-	  this.currentTarget = nativeEventTarget;
 
 	  var Interface = this.constructor.Interface;
 	  for (var propName in Interface) {
@@ -9351,7 +9354,11 @@
 	    if (normalize) {
 	      this[propName] = normalize(nativeEvent);
 	    } else {
-	      this[propName] = nativeEvent[propName];
+	      if (propName === 'target') {
+	        this.target = nativeEventTarget;
+	      } else {
+	        this[propName] = nativeEvent[propName];
+	      }
 	    }
 	  }
 
@@ -13200,7 +13207,10 @@
 	      }
 	    });
 
-	    nativeProps.children = content;
+	    if (content) {
+	      nativeProps.children = content;
+	    }
+
 	    return nativeProps;
 	  }
 
@@ -18673,7 +18683,7 @@
 
 	'use strict';
 
-	module.exports = '0.14.6';
+	module.exports = '0.14.8';
 
 /***/ },
 /* 165 */
@@ -19693,13 +19703,13 @@
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(166);
 
@@ -19723,27 +19733,33 @@
 		}
 
 		_createClass(Home, [{
-			key: "render",
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var url = 'https://github.com/theaidem';
+				setTimeout('location=\'' + url + '\';', 2000);
+			}
+		}, {
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"div",
-					{ className: "ui active inverted dimmer" },
+					'div',
+					{ className: 'ui active inverted dimmer' },
 					_react2.default.createElement(
-						"div",
-						{ className: "middle" },
+						'div',
+						{ className: 'middle' },
 						_react2.default.createElement(
-							"h2",
-							{ className: "ui aligned icon header" },
+							'h2',
+							{ className: 'ui aligned icon header' },
 							_react2.default.createElement(
-								"div",
+								'div',
 								null,
-								_react2.default.createElement("img", { className: "ui small rounded image", src: "https://avatars2.githubusercontent.com/u/3463974?v=3&s=460" })
+								_react2.default.createElement('img', { className: 'ui small rounded image', src: 'https://avatars2.githubusercontent.com/u/3463974?v=3&s=460' })
 							),
-							"Max Kokorin",
+							'Max Kokorin',
 							_react2.default.createElement(
-								"div",
-								{ className: "sub header" },
-								"@theaidem"
+								'div',
+								{ className: 'sub header' },
+								'@theaidem'
 							)
 						)
 					)
