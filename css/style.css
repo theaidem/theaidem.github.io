@@ -1,9 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);/*!
- * # Semantic UI 2.1.7 - Reset
+ * # Semantic UI 2.2.3 - Reset
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -224,7 +223,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  box-sizing: content-box;
   height: 0;
 }
 /**
@@ -361,9 +359,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   
 /* 1 */
-  
-/* 2 */
-  box-sizing: content-box;
 }
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -428,11 +423,10 @@ th {
 *******************************/
 
 /*!
- * # Semantic UI 2.1.7 - Site
+ * # Semantic UI 2.2.3 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -587,11 +581,10 @@ input::selection {
 *******************************/
 
 /*!
- * # Semantic UI 2.1.7 - Container
+ * # Semantic UI 2.2.3 - Container
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -736,11 +729,10 @@ input::selection {
 *******************************/
 
 /*!
- * # Semantic UI 2.1.7 - Header
+ * # Semantic UI 2.2.3 - Header
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -952,7 +944,7 @@ h5.ui.header .sub.header {
   color: '';
 }
 .ui.small.sub.header {
-  font-size: 0.71428571em;
+  font-size: 0.78571429em;
 }
 .ui.sub.header {
   font-size: 0.85714286em;
@@ -996,6 +988,7 @@ h5.ui.header .sub.header {
 }
 .ui.icon.header .content {
   display: block;
+  padding: 0em;
 }
 .ui.icon.header .circular.icon {
   font-size: 2em;
@@ -1337,7 +1330,7 @@ a.ui.inverted.grey.header:hover {
 }
 
 /*-------------------
-       Fittted
+       Fitted
 --------------------*/
 
 .ui.fitted.header {
@@ -1368,7 +1361,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.block.header {
   background: #F3F4F5;
-  padding: 0.71428571rem 1rem;
+  padding: 0.78571429rem 1rem;
   box-shadow: none;
   border: 1px solid #D4D4D5;
   border-radius: 0.28571429rem;
@@ -1395,7 +1388,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.attached.header {
   background: #FFFFFF;
-  padding: 0.71428571rem 1rem;
+  padding: 0.78571429rem 1rem;
   margin-left: -1px;
   margin-right: -1px;
   box-shadow: none;
@@ -1457,11 +1450,10 @@ a.ui.inverted.grey.header:hover {
 *******************************/
 
 /*!
- * # Semantic UI 2.1.7 - Icon
+ * # Semantic UI 2.2.3 - Icon
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -1578,13 +1570,15 @@ i.fitted.icon {
          Link
 --------------------*/
 
-i.link.icon {
+i.link.icon,
+i.link.icons {
   cursor: pointer;
   opacity: 0.8;
   -webkit-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
 }
-i.link.icon:hover {
+i.link.icon:hover,
+i.link.icons:hover {
   opacity: 1 !important;
 }
 
@@ -1839,7 +1833,7 @@ i.black.icon {
 i.inverted.black.icon {
   color: #545454 !important;
 }
-i.inverted.bordeblack.black.icon,
+i.inverted.bordered.black.icon,
 i.inverted.circular.black.icon {
   background-color: #1B1C1D !important;
   color: #FFFFFF !important;
@@ -1852,17 +1846,17 @@ i.inverted.circular.black.icon {
 i.mini.icon,
 i.mini.icons {
   line-height: 1;
-  font-size: 0.71428571rem;
+  font-size: 0.4em;
 }
 i.tiny.icon,
 i.tiny.icons {
   line-height: 1;
-  font-size: 0.85714286rem;
+  font-size: 0.5em;
 }
 i.small.icon,
 i.small.icons {
   line-height: 1;
-  font-size: 0.92857143em;
+  font-size: 0.75em;
 }
 i.icon,
 i.icons {
@@ -1940,7 +1934,7 @@ i.icons .inverted.corner.icon {
   text-shadow: -1px -1px 0 #1B1C1D, 1px -1px 0 #1B1C1D, -1px 1px 0 #1B1C1D, 1px 1px 0 #1B1C1D;
 }
 /*
- * Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ * Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
@@ -1982,9 +1976,6 @@ i.icon.search:before {
 i.icon.mail.outline:before {
   content: "\F003";
 }
-i.icon.external:before {
-  content: "\F08E";
-}
 i.icon.signal:before {
   content: "\F012";
 }
@@ -2006,23 +1997,35 @@ i.icon.tag:before {
 i.icon.tags:before {
   content: "\F02C";
 }
+i.icon.image:before {
+  content: "\F03E";
+}
 i.icon.calendar:before {
   content: "\F073";
 }
 i.icon.comment:before {
   content: "\F075";
 }
+i.icon.shop:before {
+  content: "\F07A";
+}
 i.icon.comments:before {
   content: "\F086";
 }
-i.icon.shop:before {
-  content: "\F07A";
+i.icon.external:before {
+  content: "\F08E";
 }
 i.icon.privacy:before {
   content: "\F084";
 }
 i.icon.settings:before {
   content: "\F085";
+}
+i.icon.comments:before {
+  content: "\F086";
+}
+i.icon.external:before {
+  content: "\F08E";
 }
 i.icon.trophy:before {
   content: "\F091";
@@ -2048,14 +2051,20 @@ i.icon.lab:before {
 i.icon.mail:before {
   content: "\F0E0";
 }
-i.icon.idea:before {
-  content: "\F0EB";
-}
 i.icon.dashboard:before {
   content: "\F0E4";
 }
+i.icon.comment.outline:before {
+  content: "\F0E5";
+}
+i.icon.comments.outline:before {
+  content: "\F0E6";
+}
 i.icon.sitemap:before {
   content: "\F0E8";
+}
+i.icon.idea:before {
+  content: "\F0EB";
 }
 i.icon.alarm:before {
   content: "\F0F3";
@@ -2078,9 +2087,6 @@ i.icon.ticket:before {
 i.icon.external.square:before {
   content: "\F14C";
 }
-i.icon.map:before {
-  content: "\F14E";
-}
 i.icon.bug:before {
   content: "\F188";
 }
@@ -2093,12 +2099,6 @@ i.icon.history:before {
 i.icon.options:before {
   content: "\F1DE";
 }
-i.icon.comment.outline:before {
-  content: "\F0E5";
-}
-i.icon.comments.outline:before {
-  content: "\F0E6";
-}
 i.icon.text.telephone:before {
   content: "\F1E4";
 }
@@ -2108,10 +2108,10 @@ i.icon.find:before {
 i.icon.wifi:before {
   content: "\F1EB";
 }
-i.icon.alarm.slash:before {
+i.icon.alarm.mute:before {
   content: "\F1F6";
 }
-i.icon.alarm.slash.outline:before {
+i.icon.alarm.mute.outline:before {
   content: "\F1F7";
 }
 i.icon.copyright:before {
@@ -2129,8 +2129,68 @@ i.icon.paint.brush:before {
 i.icon.heartbeat:before {
   content: "\F21E";
 }
+i.icon.mouse.pointer:before {
+  content: "\F245";
+}
+i.icon.hourglass.empty:before {
+  content: "\F250";
+}
+i.icon.hourglass.start:before {
+  content: "\F251";
+}
+i.icon.hourglass.half:before {
+  content: "\F252";
+}
+i.icon.hourglass.end:before {
+  content: "\F253";
+}
+i.icon.hourglass.full:before {
+  content: "\F254";
+}
+i.icon.hand.pointer:before {
+  content: "\F25A";
+}
+i.icon.trademark:before {
+  content: "\F25C";
+}
+i.icon.registered:before {
+  content: "\F25D";
+}
+i.icon.creative.commons:before {
+  content: "\F25E";
+}
+i.icon.add.to.calendar:before {
+  content: "\F271";
+}
+i.icon.remove.from.calendar:before {
+  content: "\F272";
+}
+i.icon.delete.calendar:before {
+  content: "\F273";
+}
+i.icon.checked.calendar:before {
+  content: "\F274";
+}
+i.icon.industry:before {
+  content: "\F275";
+}
+i.icon.shopping.bag:before {
+  content: "\F290";
+}
+i.icon.shopping.basket:before {
+  content: "\F291";
+}
+i.icon.hashtag:before {
+  content: "\F292";
+}
+i.icon.percent:before {
+  content: "\F295";
+}
 
 /* User Actions */
+i.icon.wait:before {
+  content: "\F017";
+}
 i.icon.download:before {
   content: "\F019";
 }
@@ -2152,11 +2212,11 @@ i.icon.print:before {
 i.icon.write:before {
   content: "\F040";
 }
-i.icon.theme:before {
-  content: "\F043";
-}
 i.icon.adjust:before {
   content: "\F042";
+}
+i.icon.theme:before {
+  content: "\F043";
 }
 i.icon.edit:before {
   content: "\F044";
@@ -2206,11 +2266,11 @@ i.icon.upload:before {
 i.icon.call:before {
   content: "\F095";
 }
-i.icon.call.square:before {
-  content: "\F098";
-}
 i.icon.remove.bookmark:before {
   content: "\F097";
+}
+i.icon.call.square:before {
+  content: "\F098";
 }
 i.icon.unlock:before {
   content: "\F09C";
@@ -2248,6 +2308,12 @@ i.icon.erase:before {
 i.icon.unlock.alternate:before {
   content: "\F13E";
 }
+i.icon.write.square:before {
+  content: "\F14B";
+}
+i.icon.share.square:before {
+  content: "\F14D";
+}
 i.icon.archive:before {
   content: "\F187";
 }
@@ -2269,15 +2335,6 @@ i.icon.share.alternate:before {
 i.icon.share.alternate.square:before {
   content: "\F1E1";
 }
-i.icon.wait:before {
-  content: "\F017";
-}
-i.icon.write.square:before {
-  content: "\F14B";
-}
-i.icon.share.square:before {
-  content: "\F14D";
-}
 i.icon.add.to.cart:before {
   content: "\F217";
 }
@@ -2290,6 +2347,21 @@ i.icon.add.user:before {
 i.icon.remove.user:before {
   content: "\F235";
 }
+i.icon.object.group:before {
+  content: "\F247";
+}
+i.icon.object.ungroup:before {
+  content: "\F248";
+}
+i.icon.clone:before {
+  content: "\F24D";
+}
+i.icon.talk:before {
+  content: "\F27A";
+}
+i.icon.talk.outline:before {
+  content: "\F27B";
+}
 
 /* Messages */
 i.icon.help.circle:before {
@@ -2298,14 +2370,14 @@ i.icon.help.circle:before {
 i.icon.info.circle:before {
   content: "\F05A";
 }
-i.icon.warning:before {
-  content: "\F12A";
-}
 i.icon.warning.circle:before {
   content: "\F06A";
 }
 i.icon.warning.sign:before {
   content: "\F071";
+}
+i.icon.announcement:before {
+  content: "\F0A1";
 }
 i.icon.help:before {
   content: "\F128";
@@ -2313,31 +2385,34 @@ i.icon.help:before {
 i.icon.info:before {
   content: "\F129";
 }
-i.icon.announcement:before {
-  content: "\F0A1";
+i.icon.warning:before {
+  content: "\F12A";
 }
 i.icon.birthday:before {
   content: "\F1FD";
 }
+i.icon.help.circle.outline:before {
+  content: "\F29C";
+}
 
 /* Users */
+i.icon.user:before {
+  content: "\F007";
+}
 i.icon.users:before {
   content: "\F0C0";
 }
 i.icon.doctor:before {
   content: "\F0F0";
 }
-i.icon.child:before {
-  content: "\F1AE";
-}
-i.icon.user:before {
-  content: "\F007";
-}
 i.icon.handicap:before {
   content: "\F193";
 }
 i.icon.student:before {
   content: "\F19D";
+}
+i.icon.child:before {
+  content: "\F1AE";
 }
 i.icon.spy:before {
   content: "\F21B";
@@ -2386,16 +2461,54 @@ i.icon.other.gender.horizontal:before {
 i.icon.neuter:before {
   content: "\F22C";
 }
+i.icon.genderless:before {
+  content: "\F22D";
+}
+
+/* Accessibility */
+i.icon.universal.access:before {
+  content: "\F29A";
+}
+i.icon.wheelchair:before {
+  content: "\F29B";
+}
+i.icon.blind:before {
+  content: "\F29D";
+}
+i.icon.audio.description:before {
+  content: "\F29E";
+}
+i.icon.volume.control.phone:before {
+  content: "\F2A0";
+}
+i.icon.braille:before {
+  content: "\F2A1";
+}
+i.icon.asl:before {
+  content: "\F2A3";
+}
+i.icon.assistive.listening.systems:before {
+  content: "\F2A2";
+}
+i.icon.deafness:before {
+  content: "\F2A4";
+}
+i.icon.sign.language:before {
+  content: "\F2A7";
+}
+i.icon.low.vision:before {
+  content: "\F2A8";
+}
 
 /* View Adjustment */
+i.icon.block.layout:before {
+  content: "\F009";
+}
 i.icon.grid.layout:before {
   content: "\F00A";
 }
 i.icon.list.layout:before {
   content: "\F00B";
-}
-i.icon.block.layout:before {
-  content: "\F009";
 }
 i.icon.zoom:before {
   content: "\F00E";
@@ -2444,9 +2557,6 @@ i.icon.plane:before {
 i.icon.magnet:before {
   content: "\F076";
 }
-i.icon.legal:before {
-  content: "\F0E3";
-}
 i.icon.lemon:before {
   content: "\F094";
 }
@@ -2462,10 +2572,13 @@ i.icon.shipping:before {
 i.icon.money:before {
   content: "\F0D6";
 }
+i.icon.legal:before {
+  content: "\F0E3";
+}
 i.icon.lightning:before {
   content: "\F0E7";
 }
-i.icon.rain:before {
+i.icon.umbrella:before {
   content: "\F0E9";
 }
 i.icon.treatment:before {
@@ -2522,6 +2635,36 @@ i.icon.calculator:before {
 i.icon.diamond:before {
   content: "\F219";
 }
+i.icon.sticky.note:before {
+  content: "\F249";
+}
+i.icon.sticky.note.outline:before {
+  content: "\F24A";
+}
+i.icon.law:before {
+  content: "\F24E";
+}
+i.icon.hand.peace:before {
+  content: "\F25B";
+}
+i.icon.hand.rock:before {
+  content: "\F255";
+}
+i.icon.hand.paper:before {
+  content: "\F256";
+}
+i.icon.hand.scissors:before {
+  content: "\F257";
+}
+i.icon.hand.lizard:before {
+  content: "\F258";
+}
+i.icon.hand.spock:before {
+  content: "\F259";
+}
+i.icon.tv:before {
+  content: "\F26C";
+}
 
 /* Shapes */
 i.icon.crosshairs:before {
@@ -2530,17 +2673,26 @@ i.icon.crosshairs:before {
 i.icon.asterisk:before {
   content: "\F069";
 }
+i.icon.square.outline:before {
+  content: "\F096";
+}
 i.icon.certificate:before {
   content: "\F0A3";
 }
-i.icon.circle:before {
-  content: "\F111";
+i.icon.square:before {
+  content: "\F0C8";
 }
 i.icon.quote.left:before {
   content: "\F10D";
 }
 i.icon.quote.right:before {
   content: "\F10E";
+}
+i.icon.spinner:before {
+  content: "\F110";
+}
+i.icon.circle:before {
+  content: "\F111";
 }
 i.icon.ellipsis.horizontal:before {
   content: "\F141";
@@ -2559,12 +2711,6 @@ i.icon.circle.notched:before {
 }
 i.icon.circle.thin:before {
   content: "\F1DB";
-}
-i.icon.square.outline:before {
-  content: "\F096";
-}
-i.icon.square:before {
-  content: "\F0C8";
 }
 
 /* Item Selection */
@@ -2610,9 +2756,6 @@ i.icon.add.square:before {
 i.icon.radio:before {
   content: "\F10C";
 }
-i.icon.selected.radio:before {
-  content: "\F192";
-}
 i.icon.minus.square:before {
   content: "\F146";
 }
@@ -2621,6 +2764,9 @@ i.icon.minus.square.outline:before {
 }
 i.icon.check.square:before {
   content: "\F14A";
+}
+i.icon.selected.radio:before {
+  content: "\F192";
 }
 i.icon.plus.square.outline:before {
   content: "\F196";
@@ -2795,12 +2941,32 @@ i.icon.toggle.left:before {
   content: "\F191";
 }
 
+/* Mobile */
+i.icon.tablet:before {
+  content: "\F10A";
+}
+i.icon.mobile:before {
+  content: "\F10B";
+}
+i.icon.battery.full:before {
+  content: "\F240";
+}
+i.icon.battery.high:before {
+  content: "\F241";
+}
+i.icon.battery.medium:before {
+  content: "\F242";
+}
+i.icon.battery.low:before {
+  content: "\F243";
+}
+i.icon.battery.empty:before {
+  content: "\F244";
+}
+
 /* Computer */
 i.icon.power:before {
   content: "\F011";
-}
-i.icon.trash:before {
-  content: "\F1F8";
 }
 i.icon.trash.outline:before {
   content: "\F014";
@@ -2814,12 +2980,6 @@ i.icon.desktop:before {
 i.icon.laptop:before {
   content: "\F109";
 }
-i.icon.tablet:before {
-  content: "\F10A";
-}
-i.icon.mobile:before {
-  content: "\F10B";
-}
 i.icon.game:before {
   content: "\F11B";
 }
@@ -2831,11 +2991,26 @@ i.icon.plug:before {
 }
 
 /* File System */
+i.icon.trash:before {
+  content: "\F1F8";
+}
+i.icon.file.outline:before {
+  content: "\F016";
+}
 i.icon.folder:before {
   content: "\F07B";
 }
 i.icon.folder.open:before {
   content: "\F07C";
+}
+i.icon.file.text.outline:before {
+  content: "\F0F6";
+}
+i.icon.folder.outline:before {
+  content: "\F114";
+}
+i.icon.folder.open.outline:before {
+  content: "\F115";
 }
 i.icon.level.up:before {
   content: "\F148";
@@ -2846,20 +3021,8 @@ i.icon.level.down:before {
 i.icon.file:before {
   content: "\F15B";
 }
-i.icon.file.outline:before {
-  content: "\F016";
-}
 i.icon.file.text:before {
   content: "\F15C";
-}
-i.icon.file.text.outline:before {
-  content: "\F0F6";
-}
-i.icon.folder.outline:before {
-  content: "\F114";
-}
-i.icon.folder.open.outline:before {
-  content: "\F115";
 }
 i.icon.file.pdf.outline:before {
   content: "\F1C1";
@@ -2890,11 +3053,14 @@ i.icon.file.code.outline:before {
 }
 
 /* Technologies */
+i.icon.qrcode:before {
+  content: "\F029";
+}
 i.icon.barcode:before {
   content: "\F02A";
 }
-i.icon.qrcode:before {
-  content: "\F029";
+i.icon.rss:before {
+  content: "\F09E";
 }
 i.icon.fork:before {
   content: "\F126";
@@ -2904,9 +3070,6 @@ i.icon.html5:before {
 }
 i.icon.css3:before {
   content: "\F13C";
-}
-i.icon.rss:before {
-  content: "\F09E";
 }
 i.icon.rss.square:before {
   content: "\F143";
@@ -2919,6 +3082,15 @@ i.icon.database:before {
 }
 i.icon.server:before {
   content: "\F233";
+}
+i.icon.usb:before {
+  content: "\F287";
+}
+i.icon.bluetooth:before {
+  content: "\F293";
+}
+i.icon.bluetooth.alternative:before {
+  content: "\F294";
 }
 
 /* Rating */
@@ -3023,6 +3195,18 @@ i.icon.video.play:before {
 i.icon.closed.captioning:before {
   content: "\F20A";
 }
+i.icon.pause.circle:before {
+  content: "\F28B";
+}
+i.icon.pause.circle.outline:before {
+  content: "\F28C";
+}
+i.icon.stop.circle:before {
+  content: "\F28D";
+}
+i.icon.stop.circle.outline:before {
+  content: "\F28E";
+}
 
 /* Map, Locations, & Transportation */
 i.icon.marker:before {
@@ -3054,6 +3238,9 @@ i.icon.h:before {
 }
 i.icon.location.arrow:before {
   content: "\F124";
+}
+i.icon.compass:before {
+  content: "\F14E";
 }
 i.icon.space.shuttle:before {
   content: "\F197";
@@ -3103,6 +3290,18 @@ i.icon.train:before {
 i.icon.subway:before {
   content: "\F239";
 }
+i.icon.map.pin:before {
+  content: "\F276";
+}
+i.icon.map.signs:before {
+  content: "\F277";
+}
+i.icon.map.outline:before {
+  content: "\F278";
+}
+i.icon.map:before {
+  content: "\F279";
+}
 
 /* Tables */
 i.icon.table:before {
@@ -3114,11 +3313,11 @@ i.icon.columns:before {
 i.icon.sort:before {
   content: "\F0DC";
 }
-i.icon.sort.ascending:before {
-  content: "\F0DE";
-}
 i.icon.sort.descending:before {
   content: "\F0DD";
+}
+i.icon.sort.ascending:before {
+  content: "\F0DE";
 }
 i.icon.sort.alphabet.ascending:before {
   content: "\F15D";
@@ -3209,7 +3408,7 @@ i.icon.underline:before {
 i.icon.paste:before {
   content: "\F0EA";
 }
-i.icon.unlink:before {
+i.icon.unlinkify:before {
   content: "\F127";
 }
 i.icon.superscript:before {
@@ -3223,6 +3422,9 @@ i.icon.header:before {
 }
 i.icon.paragraph:before {
   content: "\F1DD";
+}
+i.icon.text.cursor:before {
+  content: "\F246";
 }
 
 /* Currency */
@@ -3247,6 +3449,9 @@ i.icon.ruble:before {
 i.icon.won:before {
   content: "\F159";
 }
+i.icon.bitcoin:before {
+  content: "\F15A";
+}
 i.icon.lira:before {
   content: "\F195";
 }
@@ -3257,9 +3462,6 @@ i.icon.shekel:before {
 /* Payment Options */
 i.icon.paypal:before {
   content: "\F1ED";
-}
-i.icon.paypal.card:before {
-  content: "\F1F4";
 }
 i.icon.google.wallet:before {
   content: "\F1EE";
@@ -3276,8 +3478,20 @@ i.icon.discover:before {
 i.icon.american.express:before {
   content: "\F1F3";
 }
+i.icon.paypal.card:before {
+  content: "\F1F4";
+}
 i.icon.stripe:before {
   content: "\F1F5";
+}
+i.icon.japan.credit.bureau:before {
+  content: "\F24B";
+}
+i.icon.diners.club:before {
+  content: "\F24C";
+}
+i.icon.credit.card.alternative:before {
+  content: "\F283";
 }
 /* Networks and Websites*/
 i.icon.twitter.square:before {
@@ -3295,7 +3509,7 @@ i.icon.github.square:before {
 i.icon.twitter:before {
   content: "\F099";
 }
-i.icon.facebook:before {
+i.icon.facebook.f:before {
   content: "\F09A";
 }
 i.icon.github:before {
@@ -3321,9 +3535,6 @@ i.icon.github.alternate:before {
 }
 i.icon.maxcdn:before {
   content: "\F136";
-}
-i.icon.bitcoin:before {
-  content: "\F15A";
 }
 i.icon.youtube.square:before {
   content: "\F166";
@@ -3379,7 +3590,7 @@ i.icon.android:before {
 i.icon.linux:before {
   content: "\F17C";
 }
-i.icon.dribbble:before {
+i.icon.dribble:before {
   content: "\F17D";
 }
 i.icon.skype:before {
@@ -3409,7 +3620,7 @@ i.icon.pagelines:before {
 i.icon.stack.exchange:before {
   content: "\F18D";
 }
-i.icon.vimeo:before {
+i.icon.vimeo.square:before {
   content: "\F194";
 }
 i.icon.slack:before {
@@ -3559,6 +3770,12 @@ i.icon.simplybuilt:before {
 i.icon.skyatlas:before {
   content: "\F216";
 }
+i.icon.facebook:before {
+  content: "\F230";
+}
+i.icon.pinterest:before {
+  content: "\F231";
+}
 i.icon.whatsapp:before {
   content: "\F232";
 }
@@ -3567,6 +3784,150 @@ i.icon.viacoin:before {
 }
 i.icon.medium:before {
   content: "\F23A";
+}
+i.icon.y.combinator:before {
+  content: "\F23B";
+}
+i.icon.optinmonster:before {
+  content: "\F23C";
+}
+i.icon.opencart:before {
+  content: "\F23D";
+}
+i.icon.expeditedssl:before {
+  content: "\F23E";
+}
+i.icon.gg:before {
+  content: "\F260";
+}
+i.icon.gg.circle:before {
+  content: "\F261";
+}
+i.icon.tripadvisor:before {
+  content: "\F262";
+}
+i.icon.odnoklassniki:before {
+  content: "\F263";
+}
+i.icon.odnoklassniki.square:before {
+  content: "\F264";
+}
+i.icon.pocket:before {
+  content: "\F265";
+}
+i.icon.wikipedia:before {
+  content: "\F266";
+}
+i.icon.safari:before {
+  content: "\F267";
+}
+i.icon.chrome:before {
+  content: "\F268";
+}
+i.icon.firefox:before {
+  content: "\F269";
+}
+i.icon.opera:before {
+  content: "\F26A";
+}
+i.icon.internet.explorer:before {
+  content: "\F26B";
+}
+i.icon.contao:before {
+  content: "\F26D";
+}
+i.icon.\35 00px:before {
+  content: "\F26E";
+}
+i.icon.amazon:before {
+  content: "\F270";
+}
+i.icon.houzz:before {
+  content: "\F27C";
+}
+i.icon.vimeo:before {
+  content: "\F27D";
+}
+i.icon.black.tie:before {
+  content: "\F27E";
+}
+i.icon.fonticons:before {
+  content: "\F280";
+}
+i.icon.reddit.alien:before {
+  content: "\F281";
+}
+i.icon.microsoft.edge:before {
+  content: "\F282";
+}
+i.icon.codiepie:before {
+  content: "\F284";
+}
+i.icon.modx:before {
+  content: "\F285";
+}
+i.icon.fort.awesome:before {
+  content: "\F286";
+}
+i.icon.product.hunt:before {
+  content: "\F288";
+}
+i.icon.mixcloud:before {
+  content: "\F289";
+}
+i.icon.scribd:before {
+  content: "\F28A";
+}
+i.icon.gitlab:before {
+  content: "\F296";
+}
+i.icon.wpbeginner:before {
+  content: "\F297";
+}
+i.icon.wpforms:before {
+  content: "\F298";
+}
+i.icon.envira.gallery:before {
+  content: "\F299";
+}
+i.icon.glide:before {
+  content: "\F2A5";
+}
+i.icon.glide.g:before {
+  content: "\F2A6";
+}
+i.icon.viadeo:before {
+  content: "\F2A9";
+}
+i.icon.viadeo.square:before {
+  content: "\F2AA";
+}
+i.icon.snapchat:before {
+  content: "\F2AB";
+}
+i.icon.snapchat.ghost:before {
+  content: "\F2AC";
+}
+i.icon.snapchat.square:before {
+  content: "\F2AD";
+}
+i.icon.pied.piper.hat:before {
+  content: "\F2AE";
+}
+i.icon.first.order:before {
+  content: "\F2B0";
+}
+i.icon.yoast:before {
+  content: "\F2B1";
+}
+i.icon.themeisle:before {
+  content: "\F2B2";
+}
+i.icon.google.plus.circle:before {
+  content: "\F2B3";
+}
+i.icon.font.awesome:before {
+  content: "\F2B4";
 }
 
 
@@ -3597,21 +3958,6 @@ i.icon.delete:before {
 }
 i.icon.x:before {
   content: "\F00D";
-}
-i.icon.user.times:before {
-  content: "\F235";
-}
-i.icon.user.close:before {
-  content: "\F235";
-}
-i.icon.user.cancel:before {
-  content: "\F235";
-}
-i.icon.user.delete:before {
-  content: "\F235";
-}
-i.icon.user.x:before {
-  content: "\F235";
 }
 i.icon.zoom.in:before {
   content: "\F00E";
@@ -3661,6 +4007,9 @@ i.icon.signup:before {
 i.icon.plus.circle:before {
   content: "\F055";
 }
+i.icon.question.circle:before {
+  content: "\F059";
+}
 i.icon.dont:before {
   content: "\F05E";
 }
@@ -3670,38 +4019,32 @@ i.icon.minimize:before {
 i.icon.add:before {
   content: "\F067";
 }
-i.icon.eye:before {
-  content: "\F06E";
+i.icon.exclamation.circle:before {
+  content: "\F06A";
 }
 i.icon.attention:before {
   content: "\F06A";
 }
-i.icon.cart:before {
-  content: "\F07A";
+i.icon.eye:before {
+  content: "\F06E";
+}
+i.icon.exclamation.triangle:before {
+  content: "\F071";
 }
 i.icon.shuffle:before {
   content: "\F074";
 }
-i.icon.talk:before {
-  content: "\F075";
-}
 i.icon.chat:before {
   content: "\F075";
+}
+i.icon.cart:before {
+  content: "\F07A";
 }
 i.icon.shopping.cart:before {
   content: "\F07A";
 }
 i.icon.bar.graph:before {
   content: "\F080";
-}
-i.icon.area.graph:before {
-  content: "\F1FE";
-}
-i.icon.pie.graph:before {
-  content: "\F200";
-}
-i.icon.line.graph:before {
-  content: "\F201";
 }
 i.icon.key:before {
   content: "\F084";
@@ -3730,11 +4073,11 @@ i.icon.thumb.tack:before {
 i.icon.winner:before {
   content: "\F091";
 }
-i.icon.bookmark.outline:before {
-  content: "\F097";
-}
 i.icon.phone:before {
   content: "\F095";
+}
+i.icon.bookmark.outline:before {
+  content: "\F097";
 }
 i.icon.phone.square:before {
   content: "\F098";
@@ -3748,17 +4091,8 @@ i.icon.hdd.outline:before {
 i.icon.bullhorn:before {
   content: "\F0A1";
 }
-i.icon.bell:before {
-  content: "\F0F3";
-}
 i.icon.bell.outline:before {
   content: "\F0A2";
-}
-i.icon.bell.slash:before {
-  content: "\F1F6";
-}
-i.icon.bell.slash.outline:before {
-  content: "\F1F7";
 }
 i.icon.hand.outline.right:before {
   content: "\F0A4";
@@ -3783,6 +4117,12 @@ i.icon.briefcase:before {
 }
 i.icon.group:before {
   content: "\F0C0";
+}
+i.icon.linkify:before {
+  content: "\F0C1";
+}
+i.icon.chain:before {
+  content: "\F0C1";
 }
 i.icon.flask:before {
   content: "\F0C3";
@@ -3832,7 +4172,7 @@ i.icon.envelope:before {
 i.icon.conversation:before {
   content: "\F0E6";
 }
-i.icon.umbrella:before {
+i.icon.rain:before {
   content: "\F0E9";
 }
 i.icon.clipboard:before {
@@ -3840,6 +4180,9 @@ i.icon.clipboard:before {
 }
 i.icon.lightbulb:before {
   content: "\F0EB";
+}
+i.icon.bell:before {
+  content: "\F0F3";
 }
 i.icon.ambulance:before {
   content: "\F0F9";
@@ -3862,23 +4205,20 @@ i.icon.computer:before {
 i.icon.circle.outline:before {
   content: "\F10C";
 }
-i.icon.intersex:before {
-  content: "\F10C";
-}
-i.icon.asexual:before {
-  content: "\F10C";
-}
-i.icon.spinner:before {
-  content: "\F110";
-}
 i.icon.gamepad:before {
   content: "\F11B";
 }
 i.icon.star.half.full:before {
   content: "\F123";
 }
+i.icon.broken.chain:before {
+  content: "\F127";
+}
 i.icon.question:before {
   content: "\F128";
+}
+i.icon.exclamation:before {
+  content: "\F12A";
 }
 i.icon.eraser:before {
   content: "\F12D";
@@ -3901,12 +4241,6 @@ i.icon.play.circle:before {
 i.icon.pencil.square:before {
   content: "\F14B";
 }
-i.icon.compass:before {
-  content: "\F14E";
-}
-i.icon.amex:before {
-  content: "\F1F3";
-}
 i.icon.eur:before {
   content: "\F153";
 }
@@ -3919,12 +4253,18 @@ i.icon.usd:before {
 i.icon.inr:before {
   content: "\F156";
 }
-i.icon.cny:before,
-i.icon.rmb:before,
+i.icon.cny:before {
+  content: "\F157";
+}
+i.icon.rmb:before {
+  content: "\F157";
+}
 i.icon.jpy:before {
   content: "\F157";
 }
-i.icon.rouble:before,
+i.icon.rouble:before {
+  content: "\F158";
+}
 i.icon.rub:before {
   content: "\F158";
 }
@@ -3934,12 +4274,8 @@ i.icon.krw:before {
 i.icon.btc:before {
   content: "\F15A";
 }
-i.icon.sheqel:before,
-i.icon.ils:before {
-  content: "\F20B";
-}
-i.icon.try:before {
-  content: "\F195";
+i.icon.gratipay:before {
+  content: "\F184";
 }
 i.icon.zip:before {
   content: "\F187";
@@ -3947,38 +4283,77 @@ i.icon.zip:before {
 i.icon.dot.circle.outline:before {
   content: "\F192";
 }
-i.icon.sliders:before {
-  content: "\F1DE";
-}
-i.icon.wi-fi:before {
-  content: "\F1EB";
+i.icon.try:before {
+  content: "\F195";
 }
 i.icon.graduation:before {
   content: "\F19D";
 }
-i.icon.weixin:before {
-  content: "\F1D7";
-}
-i.icon.binoculars:before {
-  content: "\F1E5";
-}
-i.icon.gratipay:before {
-  content: "\F184";
-}
-i.icon.genderless:before {
+i.icon.circle.outline:before {
   content: "\F1DB";
 }
-i.icon.teletype:before {
-  content: "\F1E4";
+i.icon.sliders:before {
+  content: "\F1DE";
 }
-i.icon.power.cord:before {
-  content: "\F1E6";
+i.icon.weixin:before {
+  content: "\F1D7";
 }
 i.icon.tty:before {
   content: "\F1E4";
 }
+i.icon.teletype:before {
+  content: "\F1E4";
+}
+i.icon.binoculars:before {
+  content: "\F1E5";
+}
+i.icon.power.cord:before {
+  content: "\F1E6";
+}
+i.icon.wi-fi:before {
+  content: "\F1EB";
+}
+i.icon.visa.card:before {
+  content: "\F1F0";
+}
+i.icon.mastercard.card:before {
+  content: "\F1F1";
+}
+i.icon.discover.card:before {
+  content: "\F1F2";
+}
+i.icon.amex:before {
+  content: "\F1F3";
+}
+i.icon.american.express.card:before {
+  content: "\F1F3";
+}
+i.icon.stripe.card:before {
+  content: "\F1F5";
+}
+i.icon.bell.slash:before {
+  content: "\F1F6";
+}
+i.icon.bell.slash.outline:before {
+  content: "\F1F7";
+}
+i.icon.area.graph:before {
+  content: "\F1FE";
+}
+i.icon.pie.graph:before {
+  content: "\F200";
+}
+i.icon.line.graph:before {
+  content: "\F201";
+}
 i.icon.cc:before {
   content: "\F20A";
+}
+i.icon.sheqel:before {
+  content: "\F20B";
+}
+i.icon.ils:before {
+  content: "\F20B";
 }
 i.icon.plus.cart:before {
   content: "\F217";
@@ -3997,6 +4372,9 @@ i.icon.mars:before {
 }
 i.icon.mercury:before {
   content: "\F223";
+}
+i.icon.intersex:before {
+  content: "\F224";
 }
 i.icon.venus.double:before {
   content: "\F226";
@@ -4022,23 +4400,197 @@ i.icon.mars.alternate:before {
 i.icon.mars.vertical:before {
   content: "\F22A";
 }
-i.icon.mars.horizontal:before {
-  content: "\F22B";
-}
 i.icon.mars.stroke.vertical:before {
   content: "\F22A";
+}
+i.icon.mars.horizontal:before {
+  content: "\F22B";
 }
 i.icon.mars.stroke.horizontal:before {
   content: "\F22B";
 }
-i.icon.facebook.official {
+i.icon.asexual:before {
+  content: "\F22D";
+}
+i.icon.facebook.official:before {
   content: "\F230";
 }
-i.icon.pinterest.official {
-  content: "\F231";
+i.icon.user.plus:before {
+  content: "\F234";
+}
+i.icon.user.times:before {
+  content: "\F235";
+}
+i.icon.user.close:before {
+  content: "\F235";
+}
+i.icon.user.cancel:before {
+  content: "\F235";
+}
+i.icon.user.delete:before {
+  content: "\F235";
+}
+i.icon.user.x:before {
+  content: "\F235";
 }
 i.icon.bed:before {
   content: "\F236";
+}
+i.icon.yc:before {
+  content: "\F23B";
+}
+i.icon.ycombinator:before {
+  content: "\F23B";
+}
+i.icon.battery.four:before {
+  content: "\F240";
+}
+i.icon.battery.three:before {
+  content: "\F241";
+}
+i.icon.battery.three.quarters:before {
+  content: "\F241";
+}
+i.icon.battery.two:before {
+  content: "\F242";
+}
+i.icon.battery.half:before {
+  content: "\F242";
+}
+i.icon.battery.one:before {
+  content: "\F243";
+}
+i.icon.battery.quarter:before {
+  content: "\F243";
+}
+i.icon.battery.zero:before {
+  content: "\F244";
+}
+i.icon.i.cursor:before {
+  content: "\F246";
+}
+i.icon.jcb:before {
+  content: "\F24B";
+}
+i.icon.japan.credit.bureau.card:before {
+  content: "\F24B";
+}
+i.icon.diners.club.card:before {
+  content: "\F24C";
+}
+i.icon.balance:before {
+  content: "\F24E";
+}
+i.icon.hourglass.outline:before {
+  content: "\F250";
+}
+i.icon.hourglass.zero:before {
+  content: "\F250";
+}
+i.icon.hourglass.one:before {
+  content: "\F251";
+}
+i.icon.hourglass.two:before {
+  content: "\F252";
+}
+i.icon.hourglass.three:before {
+  content: "\F253";
+}
+i.icon.hourglass.four:before {
+  content: "\F254";
+}
+i.icon.grab:before {
+  content: "\F255";
+}
+i.icon.hand.victory:before {
+  content: "\F25B";
+}
+i.icon.tm:before {
+  content: "\F25C";
+}
+i.icon.r.circle:before {
+  content: "\F25D";
+}
+i.icon.television:before {
+  content: "\F26C";
+}
+i.icon.five.hundred.pixels:before {
+  content: "\F26E";
+}
+i.icon.calendar.plus:before {
+  content: "\F271";
+}
+i.icon.calendar.minus:before {
+  content: "\F272";
+}
+i.icon.calendar.times:before {
+  content: "\F273";
+}
+i.icon.calendar.check:before {
+  content: "\F274";
+}
+i.icon.factory:before {
+  content: "\F275";
+}
+i.icon.commenting:before {
+  content: "\F27A";
+}
+i.icon.commenting.outline:before {
+  content: "\F27B";
+}
+i.icon.edge:before {
+  content: "\F282";
+}
+i.icon.ms.edge:before {
+  content: "\F282";
+}
+i.icon.wordpress.beginner:before {
+  content: "\F297";
+}
+i.icon.wordpress.forms:before {
+  content: "\F298";
+}
+i.icon.envira:before {
+  content: "\F299";
+}
+i.icon.question.circle.outline:before {
+  content: "\F29C";
+}
+i.icon.assistive.listening.devices:before {
+  content: "\F2A2";
+}
+i.icon.als:before {
+  content: "\F2A2";
+}
+i.icon.ald:before {
+  content: "\F2A2";
+}
+i.icon.asl.interpreting:before {
+  content: "\F2A3";
+}
+i.icon.deaf:before {
+  content: "\F2A4";
+}
+i.icon.american.sign.language.interpreting:before {
+  content: "\F2A3";
+}
+i.icon.hard.of.hearing:before {
+  content: "\F2A4";
+}
+i.icon.signing:before {
+  content: "\F2A7";
+}
+i.icon.new.pied.piper:before {
+  content: "\F2AE";
+}
+i.icon.theme.isle:before {
+  content: "\F2B2";
+}
+i.icon.google.plus.official:before {
+  content: "\F2B3";
+}
+i.icon.fa:before {
+  content: "\F2B4";
 }
 
 
@@ -4047,11 +4599,10 @@ i.icon.bed:before {
 *******************************/
 
 /*!
- * # Semantic UI 2.1.7 - Image
+ * # Semantic UI 2.2.3 - Image
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -4087,6 +4638,11 @@ img.ui.image {
 .ui.hidden.images,
 .ui.hidden.image {
   display: none;
+}
+.ui.hidden.transition.images,
+.ui.hidden.transition.image {
+  display: block;
+  visibility: hidden;
 }
 .ui.disabled.images,
 .ui.disabled.image {
@@ -4262,7 +4818,7 @@ img.ui.bordered.image {
 .ui.mini.image {
   width: 35px;
   height: auto;
-  font-size: 0.71428571rem;
+  font-size: 0.78571429rem;
 }
 .ui.tiny.images .image,
 .ui.tiny.images img,
@@ -4349,11 +4905,961 @@ img.ui.bordered.image {
 *******************************/
 
 /*!
- * # Semantic UI 2.1.7 - Loader
+ * # Semantic UI 2.2.3 - List
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            List
+*******************************/
+
+ul.ui.list,
+ol.ui.list,
+.ui.list {
+  list-style-type: none;
+  margin: 1em 0em;
+  padding: 0em 0em;
+}
+ul.ui.list:first-child,
+ol.ui.list:first-child,
+.ui.list:first-child {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+ul.ui.list:last-child,
+ol.ui.list:last-child,
+.ui.list:last-child {
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+
+
+/*******************************
+            Content
+*******************************/
+
+
+/* List Item */
+ul.ui.list li,
+ol.ui.list li,
+.ui.list > .item,
+.ui.list .list > .item {
+  display: list-item;
+  table-layout: fixed;
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 0.21428571em 0em;
+  line-height: 1.14285714em;
+}
+ul.ui.list > li:first-child:after,
+ol.ui.list > li:first-child:after,
+.ui.list > .list > .item,
+.ui.list > .item:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+ul.ui.list li:first-child,
+ol.ui.list li:first-child,
+.ui.list .list > .item:first-child,
+.ui.list > .item:first-child {
+  padding-top: 0em;
+}
+ul.ui.list li:last-child,
+ol.ui.list li:last-child,
+.ui.list .list > .item:last-child,
+.ui.list > .item:last-child {
+  padding-bottom: 0em;
+}
+
+/* Child List */
+ul.ui.list ul,
+ol.ui.list ol,
+.ui.list .list {
+  clear: both;
+  margin: 0em;
+  padding: 0.75em 0em 0.25em 0.5em;
+}
+
+/* Child Item */
+ul.ui.list ul li,
+ol.ui.list ol li,
+.ui.list .list > .item {
+  padding: 0.14285714em 0em;
+  line-height: inherit;
+}
+
+/* Icon */
+.ui.list .list > .item > i.icon,
+.ui.list > .item > i.icon {
+  display: table-cell;
+  margin: 0em;
+  padding-top: 0.07142857em;
+  padding-right: 0.28571429em;
+  vertical-align: top;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+.ui.list .list > .item > i.icon:only-child,
+.ui.list > .item > i.icon:only-child {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Image */
+.ui.list .list > .item > .image,
+.ui.list > .item > .image {
+  display: table-cell;
+  background-color: transparent;
+  margin: 0em;
+  vertical-align: top;
+}
+.ui.list .list > .item > .image:not(:only-child):not(img),
+.ui.list > .item > .image:not(:only-child):not(img) {
+  padding-right: 0.5em;
+}
+.ui.list .list > .item > .image img,
+.ui.list > .item > .image img {
+  vertical-align: top;
+}
+.ui.list .list > .item > img.image,
+.ui.list .list > .item > .image:only-child,
+.ui.list > .item > img.image,
+.ui.list > .item > .image:only-child {
+  display: inline-block;
+}
+
+/* Content */
+.ui.list .list > .item > .content,
+.ui.list > .item > .content {
+  line-height: 1.14285714em;
+}
+.ui.list .list > .item > .image + .content,
+.ui.list .list > .item > .icon + .content,
+.ui.list > .item > .image + .content,
+.ui.list > .item > .icon + .content {
+  display: table-cell;
+  padding: 0em 0em 0em 0.5em;
+  vertical-align: top;
+}
+.ui.list .list > .item > img.image + .content,
+.ui.list > .item > img.image + .content {
+  display: inline-block;
+}
+.ui.list .list > .item > .content > .list,
+.ui.list > .item > .content > .list {
+  margin-left: 0em;
+  padding-left: 0em;
+}
+
+/* Header */
+.ui.list .list > .item .header,
+.ui.list > .item .header {
+  display: block;
+  margin: 0em;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* Description */
+.ui.list .list > .item .description,
+.ui.list > .item .description {
+  display: block;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Child Link */
+.ui.list > .item a,
+.ui.list .list > .item a {
+  cursor: pointer;
+}
+
+/* Linking Item */
+.ui.list .list > a.item,
+.ui.list > a.item {
+  cursor: pointer;
+  color: #4183C4;
+}
+.ui.list .list > a.item:hover,
+.ui.list > a.item:hover {
+  color: #1e70bf;
+}
+
+/* Linked Item Icons */
+.ui.list .list > a.item i.icon,
+.ui.list > a.item i.icon {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Header Link */
+.ui.list .list > .item a.header,
+.ui.list > .item a.header {
+  cursor: pointer;
+  color: #4183C4 !important;
+}
+.ui.list .list > .item a.header:hover,
+.ui.list > .item a.header:hover {
+  color: #1e70bf !important;
+}
+
+/* Floated Content */
+.ui[class*="left floated"].list {
+  float: left;
+}
+.ui[class*="right floated"].list {
+  float: right;
+}
+.ui.list .list > .item [class*="left floated"],
+.ui.list > .item [class*="left floated"] {
+  float: left;
+  margin: 0em 1em 0em 0em;
+}
+.ui.list .list > .item [class*="right floated"],
+.ui.list > .item [class*="right floated"] {
+  float: right;
+  margin: 0em 0em 0em 1em;
+}
+
+
+/*******************************
+            Coupling
+*******************************/
+
+.ui.menu .ui.list > .item,
+.ui.menu .ui.list .list > .item {
+  display: list-item;
+  table-layout: fixed;
+  background-color: transparent;
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 0.21428571em 0em;
+  line-height: 1.14285714em;
+}
+.ui.menu .ui.list .list > .item:before,
+.ui.menu .ui.list > .item:before {
+  border: none;
+  background: none;
+}
+.ui.menu .ui.list .list > .item:first-child,
+.ui.menu .ui.list > .item:first-child {
+  padding-top: 0em;
+}
+.ui.menu .ui.list .list > .item:last-child,
+.ui.menu .ui.list > .item:last-child {
+  padding-bottom: 0em;
+}
+
+
+/*******************************
+            Types
+*******************************/
+
+
+/*-------------------
+      Horizontal
+--------------------*/
+
+.ui.horizontal.list {
+  display: inline-block;
+  font-size: 0em;
+}
+.ui.horizontal.list > .item {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 1rem;
+}
+.ui.horizontal.list:not(.celled) > .item:first-child {
+  margin-left: 0em !important;
+  padding-left: 0em !important;
+}
+.ui.horizontal.list .list {
+  padding-left: 0em;
+  padding-bottom: 0em;
+}
+.ui.horizontal.list > .item > .image,
+.ui.horizontal.list .list > .item > .image,
+.ui.horizontal.list > .item > .icon,
+.ui.horizontal.list .list > .item > .icon,
+.ui.horizontal.list > .item > .content,
+.ui.horizontal.list .list > .item > .content {
+  vertical-align: middle;
+}
+
+/* Padding on all elements */
+.ui.horizontal.list > .item:first-child,
+.ui.horizontal.list > .item:last-child {
+  padding-top: 0.21428571em;
+  padding-bottom: 0.21428571em;
+}
+
+/* Horizontal List */
+.ui.horizontal.list > .item > i.icon {
+  margin: 0em;
+  padding: 0em 0.25em 0em 0em;
+}
+.ui.horizontal.list > .item > .icon,
+.ui.horizontal.list > .item > .icon + .content {
+  float: none;
+  display: inline-block;
+}
+
+
+/*******************************
+             States
+*******************************/
+
+
+/*-------------------
+       Disabled
+--------------------*/
+
+.ui.list .list > .disabled.item,
+.ui.list > .disabled.item {
+  pointer-events: none;
+  color: rgba(40, 40, 40, 0.3) !important;
+}
+.ui.inverted.list .list > .disabled.item,
+.ui.inverted.list > .disabled.item {
+  color: rgba(225, 225, 225, 0.3) !important;
+}
+
+/*-------------------
+        Hover
+--------------------*/
+
+.ui.list .list > a.item:hover .icon,
+.ui.list > a.item:hover .icon {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-------------------
+       Inverted
+--------------------*/
+
+.ui.inverted.list .list > a.item > .icon,
+.ui.inverted.list > a.item > .icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+.ui.inverted.list .list > .item .header,
+.ui.inverted.list > .item .header {
+  color: rgba(255, 255, 255, 0.9);
+}
+.ui.inverted.list .list > .item .description,
+.ui.inverted.list > .item .description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Item Link */
+.ui.inverted.list .list > a.item,
+.ui.inverted.list > a.item {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+.ui.inverted.list .list > a.item:hover,
+.ui.inverted.list > a.item:hover {
+  color: #1e70bf;
+}
+
+/* Linking Content */
+.ui.inverted.list .item a:not(.ui) {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.ui.inverted.list .item a:not(.ui):hover {
+  color: #1e70bf !important;
+}
+
+/*-------------------
+       Aligned
+--------------------*/
+
+.ui.list[class*="top aligned"] .image,
+.ui.list[class*="top aligned"] .content,
+.ui.list [class*="top aligned"] {
+  vertical-align: top !important;
+}
+.ui.list[class*="middle aligned"] .image,
+.ui.list[class*="middle aligned"] .content,
+.ui.list [class*="middle aligned"] {
+  vertical-align: middle !important;
+}
+.ui.list[class*="bottom aligned"] .image,
+.ui.list[class*="bottom aligned"] .content,
+.ui.list [class*="bottom aligned"] {
+  vertical-align: bottom !important;
+}
+
+/*-------------------
+       Link
+--------------------*/
+
+.ui.link.list .item,
+.ui.link.list a.item,
+.ui.link.list .item a:not(.ui) {
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.1s color ease;
+  transition: 0.1s color ease;
+}
+.ui.link.list a.item:hover,
+.ui.link.list .item a:not(.ui):hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.ui.link.list a.item:active,
+.ui.link.list .item a:not(.ui):active {
+  color: rgba(0, 0, 0, 0.9);
+}
+.ui.link.list .active.item,
+.ui.link.list .active.item a:not(.ui) {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* Inverted */
+.ui.inverted.link.list .item,
+.ui.inverted.link.list a.item,
+.ui.inverted.link.list .item a:not(.ui) {
+  color: rgba(255, 255, 255, 0.5);
+}
+.ui.inverted.link.list a.item:hover,
+.ui.inverted.link.list .item a:not(.ui):hover {
+  color: #ffffff;
+}
+.ui.inverted.link.list a.item:active,
+.ui.inverted.link.list .item a:not(.ui):active {
+  color: #ffffff;
+}
+.ui.inverted.link.list a.active.item,
+.ui.inverted.link.list .active.item a:not(.ui) {
+  color: #ffffff;
+}
+
+/*-------------------
+      Selection
+--------------------*/
+
+.ui.selection.list .list > .item,
+.ui.selection.list > .item {
+  cursor: pointer;
+  background: transparent;
+  padding: 0.5em 0.5em;
+  margin: 0em;
+  color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5em;
+  -webkit-transition: 0.1s color ease, 0.1s padding-left ease, 0.1s background-color ease;
+  transition: 0.1s color ease, 0.1s padding-left ease, 0.1s background-color ease;
+}
+.ui.selection.list .list > .item:last-child,
+.ui.selection.list > .item:last-child {
+  margin-bottom: 0em;
+}
+.ui.selection.list.list > .item:hover,
+.ui.selection.list > .item:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.8);
+}
+.ui.selection.list .list > .item:active,
+.ui.selection.list > .item:active {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.9);
+}
+.ui.selection.list .list > .item.active,
+.ui.selection.list > .item.active {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* Inverted */
+.ui.inverted.selection.list > .item,
+.ui.inverted.selection.list > .item {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+.ui.inverted.selection.list > .item:hover,
+.ui.inverted.selection.list > .item:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: #ffffff;
+}
+.ui.inverted.selection.list > .item:active,
+.ui.inverted.selection.list > .item:active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+.ui.inverted.selection.list > .item.active,
+.ui.inverted.selection.list > .item.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Celled / Divided Selection List */
+.ui.celled.selection.list .list > .item,
+.ui.divided.selection.list .list > .item,
+.ui.celled.selection.list > .item,
+.ui.divided.selection.list > .item {
+  border-radius: 0em;
+}
+
+/*-------------------
+       Animated
+--------------------*/
+
+.ui.animated.list > .item {
+  -webkit-transition: 0.25s color ease 0.1s, 0.25s padding-left ease 0.1s, 0.25s background-color ease 0.1s;
+  transition: 0.25s color ease 0.1s, 0.25s padding-left ease 0.1s, 0.25s background-color ease 0.1s;
+}
+.ui.animated.list:not(.horizontal) > .item:hover {
+  padding-left: 1em;
+}
+
+/*-------------------
+       Fitted
+--------------------*/
+
+.ui.fitted.list:not(.selection) .list > .item,
+.ui.fitted.list:not(.selection) > .item {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+.ui.fitted.selection.list .list > .item,
+.ui.fitted.selection.list > .item {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}
+
+/*-------------------
+      Bulleted
+--------------------*/
+
+ul.ui.list,
+.ui.bulleted.list {
+  margin-left: 1.25rem;
+}
+ul.ui.list li,
+.ui.bulleted.list .list > .item,
+.ui.bulleted.list > .item {
+  position: relative;
+}
+ul.ui.list li:before,
+.ui.bulleted.list .list > .item:before,
+.ui.bulleted.list > .item:before {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: auto;
+  left: auto;
+  font-weight: normal;
+  margin-left: -1.25rem;
+  content: '\2022';
+  opacity: 1;
+  color: inherit;
+  vertical-align: top;
+}
+ul.ui.list li:before,
+.ui.bulleted.list .list > a.item:before,
+.ui.bulleted.list > a.item:before {
+  color: rgba(0, 0, 0, 0.87);
+}
+ul.ui.list ul,
+.ui.bulleted.list .list {
+  padding-left: 1.25rem;
+}
+
+/* Horizontal Bulleted */
+ul.ui.horizontal.bulleted.list,
+.ui.horizontal.bulleted.list {
+  margin-left: 0em;
+}
+ul.ui.horizontal.bulleted.list li,
+.ui.horizontal.bulleted.list > .item {
+  margin-left: 1.75rem;
+}
+ul.ui.horizontal.bulleted.list li:first-child,
+.ui.horizontal.bulleted.list > .item:first-child {
+  margin-left: 0em;
+}
+ul.ui.horizontal.bulleted.list li::before,
+.ui.horizontal.bulleted.list > .item::before {
+  color: rgba(0, 0, 0, 0.87);
+}
+ul.ui.horizontal.bulleted.list li:first-child::before,
+.ui.horizontal.bulleted.list > .item:first-child::before {
+  display: none;
+}
+
+/*-------------------
+       Ordered
+--------------------*/
+
+ol.ui.list,
+.ui.ordered.list,
+.ui.ordered.list .list,
+ol.ui.list ol {
+  counter-reset: ordered;
+  margin-left: 1.25rem;
+  list-style-type: none;
+}
+ol.ui.list li,
+.ui.ordered.list .list > .item,
+.ui.ordered.list > .item {
+  list-style-type: none;
+  position: relative;
+}
+ol.ui.list li:before,
+.ui.ordered.list .list > .item:before,
+.ui.ordered.list > .item:before {
+  position: absolute;
+  top: auto;
+  left: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  margin-left: -1.25rem;
+  counter-increment: ordered;
+  content: counters(ordered, ".") " ";
+  text-align: right;
+  color: rgba(0, 0, 0, 0.87);
+  vertical-align: middle;
+  opacity: 0.8;
+}
+ol.ui.inverted.list li:before,
+.ui.ordered.inverted.list .list > .item:before,
+.ui.ordered.inverted.list > .item:before {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Value */
+.ui.ordered.list > .list > .item[data-value],
+.ui.ordered.list > .item[data-value] {
+  content: attr(data-value);
+}
+ol.ui.list li[value]:before {
+  content: attr(value);
+}
+
+/* Child Lists */
+ol.ui.list ol,
+.ui.ordered.list .list {
+  margin-left: 1em;
+}
+ol.ui.list ol li:before,
+.ui.ordered.list .list > .item:before {
+  margin-left: -2em;
+}
+
+/* Horizontal Ordered */
+ol.ui.horizontal.list,
+.ui.ordered.horizontal.list {
+  margin-left: 0em;
+}
+ol.ui.horizontal.list li:before,
+.ui.ordered.horizontal.list .list > .item:before,
+.ui.ordered.horizontal.list > .item:before {
+  position: static;
+  margin: 0em 0.5em 0em 0em;
+}
+
+/*-------------------
+       Divided
+--------------------*/
+
+.ui.divided.list > .item {
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+.ui.divided.list .list > .item {
+  border-top: none;
+}
+.ui.divided.list .item .list > .item {
+  border-top: none;
+}
+.ui.divided.list .list > .item:first-child,
+.ui.divided.list > .item:first-child {
+  border-top: none;
+}
+
+/* Sub Menu */
+.ui.divided.list:not(.horizontal) .list > .item:first-child {
+  border-top-width: 1px;
+}
+
+/* Divided bulleted */
+.ui.divided.bulleted.list:not(.horizontal),
+.ui.divided.bulleted.list .list {
+  margin-left: 0em;
+  padding-left: 0em;
+}
+.ui.divided.bulleted.list > .item:not(.horizontal) {
+  padding-left: 1.25rem;
+}
+
+/* Divided Ordered */
+.ui.divided.ordered.list {
+  margin-left: 0em;
+}
+.ui.divided.ordered.list .list > .item,
+.ui.divided.ordered.list > .item {
+  padding-left: 1.25rem;
+}
+.ui.divided.ordered.list .item .list {
+  margin-left: 0em;
+  margin-right: 0em;
+  padding-bottom: 0.21428571em;
+}
+.ui.divided.ordered.list .item .list > .item {
+  padding-left: 1em;
+}
+
+/* Divided Selection */
+.ui.divided.selection.list .list > .item,
+.ui.divided.selection.list > .item {
+  margin: 0em;
+  border-radius: 0em;
+}
+
+/* Divided horizontal */
+.ui.divided.horizontal.list {
+  margin-left: 0em;
+}
+.ui.divided.horizontal.list > .item:not(:first-child) {
+  padding-left: 0.5em;
+}
+.ui.divided.horizontal.list > .item:not(:last-child) {
+  padding-right: 0.5em;
+}
+.ui.divided.horizontal.list > .item {
+  border-top: none;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  margin: 0em;
+  line-height: 0.6;
+}
+.ui.horizontal.divided.list > .item:first-child {
+  border-left: none;
+}
+
+/* Inverted */
+.ui.divided.inverted.list > .item,
+.ui.divided.inverted.list > .list,
+.ui.divided.inverted.horizontal.list > .item {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/*-------------------
+        Celled
+--------------------*/
+
+.ui.celled.list > .item,
+.ui.celled.list > .list {
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.ui.celled.list > .item:last-child {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+/* Padding on all elements */
+.ui.celled.list > .item:first-child,
+.ui.celled.list > .item:last-child {
+  padding-top: 0.21428571em;
+  padding-bottom: 0.21428571em;
+}
+
+/* Sub Menu */
+.ui.celled.list .item .list > .item {
+  border-width: 0px;
+}
+.ui.celled.list .list > .item:first-child {
+  border-top-width: 0px;
+}
+
+/* Celled Bulleted */
+.ui.celled.bulleted.list {
+  margin-left: 0em;
+}
+.ui.celled.bulleted.list .list > .item,
+.ui.celled.bulleted.list > .item {
+  padding-left: 1.25rem;
+}
+.ui.celled.bulleted.list .item .list {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding-bottom: 0.21428571em;
+}
+
+/* Celled Ordered */
+.ui.celled.ordered.list {
+  margin-left: 0em;
+}
+.ui.celled.ordered.list .list > .item,
+.ui.celled.ordered.list > .item {
+  padding-left: 1.25rem;
+}
+.ui.celled.ordered.list .item .list {
+  margin-left: 0em;
+  margin-right: 0em;
+  padding-bottom: 0.21428571em;
+}
+.ui.celled.ordered.list .list > .item {
+  padding-left: 1em;
+}
+
+/* Celled Horizontal */
+.ui.horizontal.celled.list {
+  margin-left: 0em;
+}
+.ui.horizontal.celled.list .list > .item,
+.ui.horizontal.celled.list > .item {
+  border-top: none;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+  margin: 0em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  line-height: 0.6;
+}
+.ui.horizontal.celled.list .list > .item:last-child,
+.ui.horizontal.celled.list > .item:last-child {
+  border-bottom: none;
+  border-right: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+/* Inverted */
+.ui.celled.inverted.list > .item,
+.ui.celled.inverted.list > .list {
+  border-color: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ui.celled.inverted.horizontal.list .list > .item,
+.ui.celled.inverted.horizontal.list > .item {
+  border-color: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*-------------------
+       Relaxed
+--------------------*/
+
+.ui.relaxed.list:not(.horizontal) > .item:not(:first-child) {
+  padding-top: 0.42857143em;
+}
+.ui.relaxed.list:not(.horizontal) > .item:not(:last-child) {
+  padding-bottom: 0.42857143em;
+}
+.ui.horizontal.relaxed.list .list > .item:not(:first-child),
+.ui.horizontal.relaxed.list > .item:not(:first-child) {
+  padding-left: 1rem;
+}
+.ui.horizontal.relaxed.list .list > .item:not(:last-child),
+.ui.horizontal.relaxed.list > .item:not(:last-child) {
+  padding-right: 1rem;
+}
+
+/* Very Relaxed */
+.ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:first-child) {
+  padding-top: 0.85714286em;
+}
+.ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:last-child) {
+  padding-bottom: 0.85714286em;
+}
+.ui.horizontal[class*="very relaxed"].list .list > .item:not(:first-child),
+.ui.horizontal[class*="very relaxed"].list > .item:not(:first-child) {
+  padding-left: 1.5rem;
+}
+.ui.horizontal[class*="very relaxed"].list .list > .item:not(:last-child),
+.ui.horizontal[class*="very relaxed"].list > .item:not(:last-child) {
+  padding-right: 1.5rem;
+}
+
+/*-------------------
+      Sizes
+--------------------*/
+
+.ui.mini.list {
+  font-size: 0.78571429em;
+}
+.ui.tiny.list {
+  font-size: 0.85714286em;
+}
+.ui.small.list {
+  font-size: 0.92857143em;
+}
+.ui.list {
+  font-size: 1em;
+}
+.ui.large.list {
+  font-size: 1.14285714em;
+}
+.ui.big.list {
+  font-size: 1.28571429em;
+}
+.ui.huge.list {
+  font-size: 1.42857143em;
+}
+.ui.massive.list {
+  font-size: 1.71428571em;
+}
+.ui.mini.horizontal.list .list > .item,
+.ui.mini.horizontal.list > .item {
+  font-size: 0.78571429rem;
+}
+.ui.tiny.horizontal.list .list > .item,
+.ui.tiny.horizontal.list > .item {
+  font-size: 0.85714286rem;
+}
+.ui.small.horizontal.list .list > .item,
+.ui.small.horizontal.list > .item {
+  font-size: 0.92857143rem;
+}
+.ui.horizontal.list .list > .item,
+.ui.horizontal.list > .item {
+  font-size: 1rem;
+}
+.ui.large.horizontal.list .list > .item,
+.ui.large.horizontal.list > .item {
+  font-size: 1.14285714rem;
+}
+.ui.big.horizontal.list .list > .item,
+.ui.big.horizontal.list > .item {
+  font-size: 1.28571429rem;
+}
+.ui.huge.horizontal.list .list > .item,
+.ui.huge.horizontal.list > .item {
+  font-size: 1.42857143rem;
+}
+.ui.massive.horizontal.list .list > .item,
+.ui.massive.horizontal.list > .item {
+  font-size: 1.71428571rem;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*!
+ * # Semantic UI 2.2.3 - Loader
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -4433,29 +5939,53 @@ img.ui.bordered.image {
 }
 
 /* Sizes */
-.ui.loader:before,
-.ui.loader:after {
-  width: 2.2585em;
-  height: 2.2585em;
-  margin: 0em 0em 0em -1.12925em;
-}
 .ui.mini.loader:before,
 .ui.mini.loader:after {
-  width: 1.2857em;
-  height: 1.2857em;
-  margin: 0em 0em 0em -0.64285em;
+  width: 1rem;
+  height: 1rem;
+  margin: 0em 0em 0em -0.5rem;
+}
+.ui.tiny.loader:before,
+.ui.tiny.loader:after {
+  width: 1.14285714rem;
+  height: 1.14285714rem;
+  margin: 0em 0em 0em -0.57142857rem;
 }
 .ui.small.loader:before,
 .ui.small.loader:after {
-  width: 1.7142em;
-  height: 1.7142em;
-  margin: 0em 0em 0em -0.8571em;
+  width: 1.71428571rem;
+  height: 1.71428571rem;
+  margin: 0em 0em 0em -0.85714286rem;
+}
+.ui.loader:before,
+.ui.loader:after {
+  width: 2.28571429rem;
+  height: 2.28571429rem;
+  margin: 0em 0em 0em -1.14285714rem;
 }
 .ui.large.loader:before,
 .ui.large.loader:after {
-  width: 4.5714em;
-  height: 4.5714em;
-  margin: 0em 0em 0em -2.2857em;
+  width: 3.42857143rem;
+  height: 3.42857143rem;
+  margin: 0em 0em 0em -1.71428571rem;
+}
+.ui.big.loader:before,
+.ui.big.loader:after {
+  width: 3.71428571rem;
+  height: 3.71428571rem;
+  margin: 0em 0em 0em -1.85714286rem;
+}
+.ui.huge.loader:before,
+.ui.huge.loader:after {
+  width: 4.14285714rem;
+  height: 4.14285714rem;
+  margin: 0em 0em 0em -2.07142857rem;
+}
+.ui.massive.loader:before,
+.ui.massive.loader:after {
+  width: 4.57142857rem;
+  height: 4.57142857rem;
+  margin: 0em 0em 0em -2.28571429rem;
 }
 
 /*-------------------
@@ -4541,45 +6071,85 @@ img.ui.bordered.image {
 /* Loader */
 .ui.inverted.dimmer .ui.mini.loader,
 .ui.mini.loader {
-  width: 1.2857em;
-  height: 1.2857em;
-  font-size: 0.71428571em;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.78571429em;
+}
+.ui.inverted.dimmer .ui.tiny.loader,
+.ui.tiny.loader {
+  width: 1.14285714rem;
+  height: 1.14285714rem;
+  font-size: 0.85714286em;
 }
 .ui.inverted.dimmer .ui.small.loader,
 .ui.small.loader {
-  width: 1.7142em;
-  height: 1.7142em;
+  width: 1.71428571rem;
+  height: 1.71428571rem;
   font-size: 0.92857143em;
 }
 .ui.inverted.dimmer .ui.loader,
 .ui.loader {
-  width: 2.2585em;
-  height: 2.2585em;
+  width: 2.28571429rem;
+  height: 2.28571429rem;
   font-size: 1em;
 }
-.ui.inverted.dimmer .ui.loader.large,
-.ui.loader.large {
-  width: 4.5714em;
-  height: 4.5714em;
+.ui.inverted.dimmer .ui.large.loader,
+.ui.large.loader {
+  width: 3.42857143rem;
+  height: 3.42857143rem;
   font-size: 1.14285714em;
+}
+.ui.inverted.dimmer .ui.big.loader,
+.ui.big.loader {
+  width: 3.71428571rem;
+  height: 3.71428571rem;
+  font-size: 1.28571429em;
+}
+.ui.inverted.dimmer .ui.huge.loader,
+.ui.huge.loader {
+  width: 4.14285714rem;
+  height: 4.14285714rem;
+  font-size: 1.42857143em;
+}
+.ui.inverted.dimmer .ui.massive.loader,
+.ui.massive.loader {
+  width: 4.57142857rem;
+  height: 4.57142857rem;
+  font-size: 1.71428571em;
 }
 
 /* Text Loader */
 .ui.mini.text.loader {
-  min-width: 1.2857em;
-  padding-top: 1.99998571em;
+  min-width: 1rem;
+  padding-top: 1.78571429rem;
+}
+.ui.tiny.text.loader {
+  min-width: 1.14285714rem;
+  padding-top: 1.92857143rem;
 }
 .ui.small.text.loader {
-  min-width: 1.7142em;
-  padding-top: 2.42848571em;
+  min-width: 1.71428571rem;
+  padding-top: 2.5rem;
 }
 .ui.text.loader {
-  min-width: 2.2585em;
-  padding-top: 2.97278571em;
+  min-width: 2.28571429rem;
+  padding-top: 3.07142857rem;
 }
 .ui.large.text.loader {
-  min-width: 4.5714em;
-  padding-top: 5.28568571em;
+  min-width: 3.42857143rem;
+  padding-top: 4.21428571rem;
+}
+.ui.big.text.loader {
+  min-width: 3.71428571rem;
+  padding-top: 4.5rem;
+}
+.ui.huge.text.loader {
+  min-width: 4.14285714rem;
+  padding-top: 4.92857143rem;
+}
+.ui.massive.text.loader {
+  min-width: 4.57142857rem;
+  padding-top: 5.35714286rem;
 }
 
 /*-------------------
@@ -4621,6 +6191,2038 @@ img.ui.bordered.image {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
+*******************************/
+
+/*!
+ * # Semantic UI 2.2.3 - Grid
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Standard
+*******************************/
+
+.ui.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 0em;
+}
+
+/*----------------------
+      Remove Gutters
+-----------------------*/
+
+.ui.grid {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.ui.relaxed.grid {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+.ui[class*="very relaxed"].grid {
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+}
+
+/* Preserve Rows Spacing on Consecutive Grids */
+.ui.grid + .grid {
+  margin-top: 1rem;
+}
+
+/*-------------------
+       Columns
+--------------------*/
+
+
+/* Standard 16 column */
+.ui.grid > .column:not(.row),
+.ui.grid > .row > .column {
+  position: relative;
+  display: inline-block;
+  width: 6.25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  vertical-align: top;
+}
+.ui.grid > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*-------------------
+        Rows
+--------------------*/
+
+.ui.grid > .row {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: inherit;
+  -webkit-justify-content: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100% !important;
+  padding: 0rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*-------------------
+       Columns
+--------------------*/
+
+
+/* Vertical padding when no rows */
+.ui.grid > .column:not(.row) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.ui.grid > .row > .column {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/*-------------------
+      Content
+--------------------*/
+
+.ui.grid > .row > img,
+.ui.grid > .row > .column > img {
+  max-width: 100%;
+}
+
+/*-------------------
+    Loose Coupling
+--------------------*/
+
+
+/* Collapse Margin on Consecutive Grid */
+.ui.grid > .ui.grid:first-child {
+  margin-top: 0em;
+}
+.ui.grid > .ui.grid:last-child {
+  margin-bottom: 0em;
+}
+
+/* Segment inside Aligned Grid */
+.ui.grid .aligned.row > .column > .segment:not(.compact):not(.attached),
+.ui.aligned.grid .column > .segment:not(.compact):not(.attached) {
+  width: 100%;
+}
+
+/* Align Dividers with Gutter */
+.ui.grid .row + .ui.divider {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1rem 1rem;
+}
+.ui.grid .column + .ui.vertical.divider {
+  height: calc(50% -  1rem );
+}
+
+/* Remove Border on Last Horizontal Segment */
+.ui.grid > .row > .column:last-child > .horizontal.segment,
+.ui.grid > .column:last-child > .horizontal.segment {
+  box-shadow: none;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-----------------------
+       Page Grid
+-------------------------*/
+
+@media only screen and (max-width: 767px) {
+  .ui.page.grid {
+    width: auto;
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.page.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui.page.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .ui.page.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .ui.page.grid {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 23%;
+    padding-right: 23%;
+  }
+}
+
+/*-------------------
+     Column Count
+--------------------*/
+
+
+/* Assume full width with one column */
+.ui.grid > .column:only-child,
+.ui.grid > .row > .column:only-child {
+  width: 100%;
+}
+
+/* Grid Based */
+.ui[class*="one column"].grid > .row > .column,
+.ui[class*="one column"].grid > .column:not(.row) {
+  width: 100%;
+}
+.ui[class*="two column"].grid > .row > .column,
+.ui[class*="two column"].grid > .column:not(.row) {
+  width: 50%;
+}
+.ui[class*="three column"].grid > .row > .column,
+.ui[class*="three column"].grid > .column:not(.row) {
+  width: 33.33333333%;
+}
+.ui[class*="four column"].grid > .row > .column,
+.ui[class*="four column"].grid > .column:not(.row) {
+  width: 25%;
+}
+.ui[class*="five column"].grid > .row > .column,
+.ui[class*="five column"].grid > .column:not(.row) {
+  width: 20%;
+}
+.ui[class*="six column"].grid > .row > .column,
+.ui[class*="six column"].grid > .column:not(.row) {
+  width: 16.66666667%;
+}
+.ui[class*="seven column"].grid > .row > .column,
+.ui[class*="seven column"].grid > .column:not(.row) {
+  width: 14.28571429%;
+}
+.ui[class*="eight column"].grid > .row > .column,
+.ui[class*="eight column"].grid > .column:not(.row) {
+  width: 12.5%;
+}
+.ui[class*="nine column"].grid > .row > .column,
+.ui[class*="nine column"].grid > .column:not(.row) {
+  width: 11.11111111%;
+}
+.ui[class*="ten column"].grid > .row > .column,
+.ui[class*="ten column"].grid > .column:not(.row) {
+  width: 10%;
+}
+.ui[class*="eleven column"].grid > .row > .column,
+.ui[class*="eleven column"].grid > .column:not(.row) {
+  width: 9.09090909%;
+}
+.ui[class*="twelve column"].grid > .row > .column,
+.ui[class*="twelve column"].grid > .column:not(.row) {
+  width: 8.33333333%;
+}
+.ui[class*="thirteen column"].grid > .row > .column,
+.ui[class*="thirteen column"].grid > .column:not(.row) {
+  width: 7.69230769%;
+}
+.ui[class*="fourteen column"].grid > .row > .column,
+.ui[class*="fourteen column"].grid > .column:not(.row) {
+  width: 7.14285714%;
+}
+.ui[class*="fifteen column"].grid > .row > .column,
+.ui[class*="fifteen column"].grid > .column:not(.row) {
+  width: 6.66666667%;
+}
+.ui[class*="sixteen column"].grid > .row > .column,
+.ui[class*="sixteen column"].grid > .column:not(.row) {
+  width: 6.25%;
+}
+
+/* Row Based Overrides */
+.ui.grid > [class*="one column"].row > .column {
+  width: 100% !important;
+}
+.ui.grid > [class*="two column"].row > .column {
+  width: 50% !important;
+}
+.ui.grid > [class*="three column"].row > .column {
+  width: 33.33333333% !important;
+}
+.ui.grid > [class*="four column"].row > .column {
+  width: 25% !important;
+}
+.ui.grid > [class*="five column"].row > .column {
+  width: 20% !important;
+}
+.ui.grid > [class*="six column"].row > .column {
+  width: 16.66666667% !important;
+}
+.ui.grid > [class*="seven column"].row > .column {
+  width: 14.28571429% !important;
+}
+.ui.grid > [class*="eight column"].row > .column {
+  width: 12.5% !important;
+}
+.ui.grid > [class*="nine column"].row > .column {
+  width: 11.11111111% !important;
+}
+.ui.grid > [class*="ten column"].row > .column {
+  width: 10% !important;
+}
+.ui.grid > [class*="eleven column"].row > .column {
+  width: 9.09090909% !important;
+}
+.ui.grid > [class*="twelve column"].row > .column {
+  width: 8.33333333% !important;
+}
+.ui.grid > [class*="thirteen column"].row > .column {
+  width: 7.69230769% !important;
+}
+.ui.grid > [class*="fourteen column"].row > .column {
+  width: 7.14285714% !important;
+}
+.ui.grid > [class*="fifteen column"].row > .column {
+  width: 6.66666667% !important;
+}
+.ui.grid > [class*="sixteen column"].row > .column {
+  width: 6.25% !important;
+}
+
+/* Celled Page */
+.ui.celled.page.grid {
+  box-shadow: none;
+}
+
+/*-------------------
+    Column Width
+--------------------*/
+
+
+/* Sizing Combinations */
+.ui.grid > .row > [class*="one wide"].column,
+.ui.grid > .column.row > [class*="one wide"].column,
+.ui.grid > [class*="one wide"].column,
+.ui.column.grid > [class*="one wide"].column {
+  width: 6.25% !important;
+}
+.ui.grid > .row > [class*="two wide"].column,
+.ui.grid > .column.row > [class*="two wide"].column,
+.ui.grid > [class*="two wide"].column,
+.ui.column.grid > [class*="two wide"].column {
+  width: 12.5% !important;
+}
+.ui.grid > .row > [class*="three wide"].column,
+.ui.grid > .column.row > [class*="three wide"].column,
+.ui.grid > [class*="three wide"].column,
+.ui.column.grid > [class*="three wide"].column {
+  width: 18.75% !important;
+}
+.ui.grid > .row > [class*="four wide"].column,
+.ui.grid > .column.row > [class*="four wide"].column,
+.ui.grid > [class*="four wide"].column,
+.ui.column.grid > [class*="four wide"].column {
+  width: 25% !important;
+}
+.ui.grid > .row > [class*="five wide"].column,
+.ui.grid > .column.row > [class*="five wide"].column,
+.ui.grid > [class*="five wide"].column,
+.ui.column.grid > [class*="five wide"].column {
+  width: 31.25% !important;
+}
+.ui.grid > .row > [class*="six wide"].column,
+.ui.grid > .column.row > [class*="six wide"].column,
+.ui.grid > [class*="six wide"].column,
+.ui.column.grid > [class*="six wide"].column {
+  width: 37.5% !important;
+}
+.ui.grid > .row > [class*="seven wide"].column,
+.ui.grid > .column.row > [class*="seven wide"].column,
+.ui.grid > [class*="seven wide"].column,
+.ui.column.grid > [class*="seven wide"].column {
+  width: 43.75% !important;
+}
+.ui.grid > .row > [class*="eight wide"].column,
+.ui.grid > .column.row > [class*="eight wide"].column,
+.ui.grid > [class*="eight wide"].column,
+.ui.column.grid > [class*="eight wide"].column {
+  width: 50% !important;
+}
+.ui.grid > .row > [class*="nine wide"].column,
+.ui.grid > .column.row > [class*="nine wide"].column,
+.ui.grid > [class*="nine wide"].column,
+.ui.column.grid > [class*="nine wide"].column {
+  width: 56.25% !important;
+}
+.ui.grid > .row > [class*="ten wide"].column,
+.ui.grid > .column.row > [class*="ten wide"].column,
+.ui.grid > [class*="ten wide"].column,
+.ui.column.grid > [class*="ten wide"].column {
+  width: 62.5% !important;
+}
+.ui.grid > .row > [class*="eleven wide"].column,
+.ui.grid > .column.row > [class*="eleven wide"].column,
+.ui.grid > [class*="eleven wide"].column,
+.ui.column.grid > [class*="eleven wide"].column {
+  width: 68.75% !important;
+}
+.ui.grid > .row > [class*="twelve wide"].column,
+.ui.grid > .column.row > [class*="twelve wide"].column,
+.ui.grid > [class*="twelve wide"].column,
+.ui.column.grid > [class*="twelve wide"].column {
+  width: 75% !important;
+}
+.ui.grid > .row > [class*="thirteen wide"].column,
+.ui.grid > .column.row > [class*="thirteen wide"].column,
+.ui.grid > [class*="thirteen wide"].column,
+.ui.column.grid > [class*="thirteen wide"].column {
+  width: 81.25% !important;
+}
+.ui.grid > .row > [class*="fourteen wide"].column,
+.ui.grid > .column.row > [class*="fourteen wide"].column,
+.ui.grid > [class*="fourteen wide"].column,
+.ui.column.grid > [class*="fourteen wide"].column {
+  width: 87.5% !important;
+}
+.ui.grid > .row > [class*="fifteen wide"].column,
+.ui.grid > .column.row > [class*="fifteen wide"].column,
+.ui.grid > [class*="fifteen wide"].column,
+.ui.column.grid > [class*="fifteen wide"].column {
+  width: 93.75% !important;
+}
+.ui.grid > .row > [class*="sixteen wide"].column,
+.ui.grid > .column.row > [class*="sixteen wide"].column,
+.ui.grid > [class*="sixteen wide"].column,
+.ui.column.grid > [class*="sixteen wide"].column {
+  width: 100% !important;
+}
+
+/*----------------------
+    Width per Device
+-----------------------*/
+
+
+/* Mobile Sizing Combinations */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .ui.grid > .row > [class*="one wide mobile"].column,
+  .ui.grid > .column.row > [class*="one wide mobile"].column,
+  .ui.grid > [class*="one wide mobile"].column,
+  .ui.column.grid > [class*="one wide mobile"].column {
+    width: 6.25% !important;
+  }
+  .ui.grid > .row > [class*="two wide mobile"].column,
+  .ui.grid > .column.row > [class*="two wide mobile"].column,
+  .ui.grid > [class*="two wide mobile"].column,
+  .ui.column.grid > [class*="two wide mobile"].column {
+    width: 12.5% !important;
+  }
+  .ui.grid > .row > [class*="three wide mobile"].column,
+  .ui.grid > .column.row > [class*="three wide mobile"].column,
+  .ui.grid > [class*="three wide mobile"].column,
+  .ui.column.grid > [class*="three wide mobile"].column {
+    width: 18.75% !important;
+  }
+  .ui.grid > .row > [class*="four wide mobile"].column,
+  .ui.grid > .column.row > [class*="four wide mobile"].column,
+  .ui.grid > [class*="four wide mobile"].column,
+  .ui.column.grid > [class*="four wide mobile"].column {
+    width: 25% !important;
+  }
+  .ui.grid > .row > [class*="five wide mobile"].column,
+  .ui.grid > .column.row > [class*="five wide mobile"].column,
+  .ui.grid > [class*="five wide mobile"].column,
+  .ui.column.grid > [class*="five wide mobile"].column {
+    width: 31.25% !important;
+  }
+  .ui.grid > .row > [class*="six wide mobile"].column,
+  .ui.grid > .column.row > [class*="six wide mobile"].column,
+  .ui.grid > [class*="six wide mobile"].column,
+  .ui.column.grid > [class*="six wide mobile"].column {
+    width: 37.5% !important;
+  }
+  .ui.grid > .row > [class*="seven wide mobile"].column,
+  .ui.grid > .column.row > [class*="seven wide mobile"].column,
+  .ui.grid > [class*="seven wide mobile"].column,
+  .ui.column.grid > [class*="seven wide mobile"].column {
+    width: 43.75% !important;
+  }
+  .ui.grid > .row > [class*="eight wide mobile"].column,
+  .ui.grid > .column.row > [class*="eight wide mobile"].column,
+  .ui.grid > [class*="eight wide mobile"].column,
+  .ui.column.grid > [class*="eight wide mobile"].column {
+    width: 50% !important;
+  }
+  .ui.grid > .row > [class*="nine wide mobile"].column,
+  .ui.grid > .column.row > [class*="nine wide mobile"].column,
+  .ui.grid > [class*="nine wide mobile"].column,
+  .ui.column.grid > [class*="nine wide mobile"].column {
+    width: 56.25% !important;
+  }
+  .ui.grid > .row > [class*="ten wide mobile"].column,
+  .ui.grid > .column.row > [class*="ten wide mobile"].column,
+  .ui.grid > [class*="ten wide mobile"].column,
+  .ui.column.grid > [class*="ten wide mobile"].column {
+    width: 62.5% !important;
+  }
+  .ui.grid > .row > [class*="eleven wide mobile"].column,
+  .ui.grid > .column.row > [class*="eleven wide mobile"].column,
+  .ui.grid > [class*="eleven wide mobile"].column,
+  .ui.column.grid > [class*="eleven wide mobile"].column {
+    width: 68.75% !important;
+  }
+  .ui.grid > .row > [class*="twelve wide mobile"].column,
+  .ui.grid > .column.row > [class*="twelve wide mobile"].column,
+  .ui.grid > [class*="twelve wide mobile"].column,
+  .ui.column.grid > [class*="twelve wide mobile"].column {
+    width: 75% !important;
+  }
+  .ui.grid > .row > [class*="thirteen wide mobile"].column,
+  .ui.grid > .column.row > [class*="thirteen wide mobile"].column,
+  .ui.grid > [class*="thirteen wide mobile"].column,
+  .ui.column.grid > [class*="thirteen wide mobile"].column {
+    width: 81.25% !important;
+  }
+  .ui.grid > .row > [class*="fourteen wide mobile"].column,
+  .ui.grid > .column.row > [class*="fourteen wide mobile"].column,
+  .ui.grid > [class*="fourteen wide mobile"].column,
+  .ui.column.grid > [class*="fourteen wide mobile"].column {
+    width: 87.5% !important;
+  }
+  .ui.grid > .row > [class*="fifteen wide mobile"].column,
+  .ui.grid > .column.row > [class*="fifteen wide mobile"].column,
+  .ui.grid > [class*="fifteen wide mobile"].column,
+  .ui.column.grid > [class*="fifteen wide mobile"].column {
+    width: 93.75% !important;
+  }
+  .ui.grid > .row > [class*="sixteen wide mobile"].column,
+  .ui.grid > .column.row > [class*="sixteen wide mobile"].column,
+  .ui.grid > [class*="sixteen wide mobile"].column,
+  .ui.column.grid > [class*="sixteen wide mobile"].column {
+    width: 100% !important;
+  }
+}
+
+/* Tablet Sizing Combinations */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.grid > .row > [class*="one wide tablet"].column,
+  .ui.grid > .column.row > [class*="one wide tablet"].column,
+  .ui.grid > [class*="one wide tablet"].column,
+  .ui.column.grid > [class*="one wide tablet"].column {
+    width: 6.25% !important;
+  }
+  .ui.grid > .row > [class*="two wide tablet"].column,
+  .ui.grid > .column.row > [class*="two wide tablet"].column,
+  .ui.grid > [class*="two wide tablet"].column,
+  .ui.column.grid > [class*="two wide tablet"].column {
+    width: 12.5% !important;
+  }
+  .ui.grid > .row > [class*="three wide tablet"].column,
+  .ui.grid > .column.row > [class*="three wide tablet"].column,
+  .ui.grid > [class*="three wide tablet"].column,
+  .ui.column.grid > [class*="three wide tablet"].column {
+    width: 18.75% !important;
+  }
+  .ui.grid > .row > [class*="four wide tablet"].column,
+  .ui.grid > .column.row > [class*="four wide tablet"].column,
+  .ui.grid > [class*="four wide tablet"].column,
+  .ui.column.grid > [class*="four wide tablet"].column {
+    width: 25% !important;
+  }
+  .ui.grid > .row > [class*="five wide tablet"].column,
+  .ui.grid > .column.row > [class*="five wide tablet"].column,
+  .ui.grid > [class*="five wide tablet"].column,
+  .ui.column.grid > [class*="five wide tablet"].column {
+    width: 31.25% !important;
+  }
+  .ui.grid > .row > [class*="six wide tablet"].column,
+  .ui.grid > .column.row > [class*="six wide tablet"].column,
+  .ui.grid > [class*="six wide tablet"].column,
+  .ui.column.grid > [class*="six wide tablet"].column {
+    width: 37.5% !important;
+  }
+  .ui.grid > .row > [class*="seven wide tablet"].column,
+  .ui.grid > .column.row > [class*="seven wide tablet"].column,
+  .ui.grid > [class*="seven wide tablet"].column,
+  .ui.column.grid > [class*="seven wide tablet"].column {
+    width: 43.75% !important;
+  }
+  .ui.grid > .row > [class*="eight wide tablet"].column,
+  .ui.grid > .column.row > [class*="eight wide tablet"].column,
+  .ui.grid > [class*="eight wide tablet"].column,
+  .ui.column.grid > [class*="eight wide tablet"].column {
+    width: 50% !important;
+  }
+  .ui.grid > .row > [class*="nine wide tablet"].column,
+  .ui.grid > .column.row > [class*="nine wide tablet"].column,
+  .ui.grid > [class*="nine wide tablet"].column,
+  .ui.column.grid > [class*="nine wide tablet"].column {
+    width: 56.25% !important;
+  }
+  .ui.grid > .row > [class*="ten wide tablet"].column,
+  .ui.grid > .column.row > [class*="ten wide tablet"].column,
+  .ui.grid > [class*="ten wide tablet"].column,
+  .ui.column.grid > [class*="ten wide tablet"].column {
+    width: 62.5% !important;
+  }
+  .ui.grid > .row > [class*="eleven wide tablet"].column,
+  .ui.grid > .column.row > [class*="eleven wide tablet"].column,
+  .ui.grid > [class*="eleven wide tablet"].column,
+  .ui.column.grid > [class*="eleven wide tablet"].column {
+    width: 68.75% !important;
+  }
+  .ui.grid > .row > [class*="twelve wide tablet"].column,
+  .ui.grid > .column.row > [class*="twelve wide tablet"].column,
+  .ui.grid > [class*="twelve wide tablet"].column,
+  .ui.column.grid > [class*="twelve wide tablet"].column {
+    width: 75% !important;
+  }
+  .ui.grid > .row > [class*="thirteen wide tablet"].column,
+  .ui.grid > .column.row > [class*="thirteen wide tablet"].column,
+  .ui.grid > [class*="thirteen wide tablet"].column,
+  .ui.column.grid > [class*="thirteen wide tablet"].column {
+    width: 81.25% !important;
+  }
+  .ui.grid > .row > [class*="fourteen wide tablet"].column,
+  .ui.grid > .column.row > [class*="fourteen wide tablet"].column,
+  .ui.grid > [class*="fourteen wide tablet"].column,
+  .ui.column.grid > [class*="fourteen wide tablet"].column {
+    width: 87.5% !important;
+  }
+  .ui.grid > .row > [class*="fifteen wide tablet"].column,
+  .ui.grid > .column.row > [class*="fifteen wide tablet"].column,
+  .ui.grid > [class*="fifteen wide tablet"].column,
+  .ui.column.grid > [class*="fifteen wide tablet"].column {
+    width: 93.75% !important;
+  }
+  .ui.grid > .row > [class*="sixteen wide tablet"].column,
+  .ui.grid > .column.row > [class*="sixteen wide tablet"].column,
+  .ui.grid > [class*="sixteen wide tablet"].column,
+  .ui.column.grid > [class*="sixteen wide tablet"].column {
+    width: 100% !important;
+  }
+}
+
+/* Computer/Desktop Sizing Combinations */
+@media only screen and (min-width: 992px) {
+  .ui.grid > .row > [class*="one wide computer"].column,
+  .ui.grid > .column.row > [class*="one wide computer"].column,
+  .ui.grid > [class*="one wide computer"].column,
+  .ui.column.grid > [class*="one wide computer"].column {
+    width: 6.25% !important;
+  }
+  .ui.grid > .row > [class*="two wide computer"].column,
+  .ui.grid > .column.row > [class*="two wide computer"].column,
+  .ui.grid > [class*="two wide computer"].column,
+  .ui.column.grid > [class*="two wide computer"].column {
+    width: 12.5% !important;
+  }
+  .ui.grid > .row > [class*="three wide computer"].column,
+  .ui.grid > .column.row > [class*="three wide computer"].column,
+  .ui.grid > [class*="three wide computer"].column,
+  .ui.column.grid > [class*="three wide computer"].column {
+    width: 18.75% !important;
+  }
+  .ui.grid > .row > [class*="four wide computer"].column,
+  .ui.grid > .column.row > [class*="four wide computer"].column,
+  .ui.grid > [class*="four wide computer"].column,
+  .ui.column.grid > [class*="four wide computer"].column {
+    width: 25% !important;
+  }
+  .ui.grid > .row > [class*="five wide computer"].column,
+  .ui.grid > .column.row > [class*="five wide computer"].column,
+  .ui.grid > [class*="five wide computer"].column,
+  .ui.column.grid > [class*="five wide computer"].column {
+    width: 31.25% !important;
+  }
+  .ui.grid > .row > [class*="six wide computer"].column,
+  .ui.grid > .column.row > [class*="six wide computer"].column,
+  .ui.grid > [class*="six wide computer"].column,
+  .ui.column.grid > [class*="six wide computer"].column {
+    width: 37.5% !important;
+  }
+  .ui.grid > .row > [class*="seven wide computer"].column,
+  .ui.grid > .column.row > [class*="seven wide computer"].column,
+  .ui.grid > [class*="seven wide computer"].column,
+  .ui.column.grid > [class*="seven wide computer"].column {
+    width: 43.75% !important;
+  }
+  .ui.grid > .row > [class*="eight wide computer"].column,
+  .ui.grid > .column.row > [class*="eight wide computer"].column,
+  .ui.grid > [class*="eight wide computer"].column,
+  .ui.column.grid > [class*="eight wide computer"].column {
+    width: 50% !important;
+  }
+  .ui.grid > .row > [class*="nine wide computer"].column,
+  .ui.grid > .column.row > [class*="nine wide computer"].column,
+  .ui.grid > [class*="nine wide computer"].column,
+  .ui.column.grid > [class*="nine wide computer"].column {
+    width: 56.25% !important;
+  }
+  .ui.grid > .row > [class*="ten wide computer"].column,
+  .ui.grid > .column.row > [class*="ten wide computer"].column,
+  .ui.grid > [class*="ten wide computer"].column,
+  .ui.column.grid > [class*="ten wide computer"].column {
+    width: 62.5% !important;
+  }
+  .ui.grid > .row > [class*="eleven wide computer"].column,
+  .ui.grid > .column.row > [class*="eleven wide computer"].column,
+  .ui.grid > [class*="eleven wide computer"].column,
+  .ui.column.grid > [class*="eleven wide computer"].column {
+    width: 68.75% !important;
+  }
+  .ui.grid > .row > [class*="twelve wide computer"].column,
+  .ui.grid > .column.row > [class*="twelve wide computer"].column,
+  .ui.grid > [class*="twelve wide computer"].column,
+  .ui.column.grid > [class*="twelve wide computer"].column {
+    width: 75% !important;
+  }
+  .ui.grid > .row > [class*="thirteen wide computer"].column,
+  .ui.grid > .column.row > [class*="thirteen wide computer"].column,
+  .ui.grid > [class*="thirteen wide computer"].column,
+  .ui.column.grid > [class*="thirteen wide computer"].column {
+    width: 81.25% !important;
+  }
+  .ui.grid > .row > [class*="fourteen wide computer"].column,
+  .ui.grid > .column.row > [class*="fourteen wide computer"].column,
+  .ui.grid > [class*="fourteen wide computer"].column,
+  .ui.column.grid > [class*="fourteen wide computer"].column {
+    width: 87.5% !important;
+  }
+  .ui.grid > .row > [class*="fifteen wide computer"].column,
+  .ui.grid > .column.row > [class*="fifteen wide computer"].column,
+  .ui.grid > [class*="fifteen wide computer"].column,
+  .ui.column.grid > [class*="fifteen wide computer"].column {
+    width: 93.75% !important;
+  }
+  .ui.grid > .row > [class*="sixteen wide computer"].column,
+  .ui.grid > .column.row > [class*="sixteen wide computer"].column,
+  .ui.grid > [class*="sixteen wide computer"].column,
+  .ui.column.grid > [class*="sixteen wide computer"].column {
+    width: 100% !important;
+  }
+}
+
+/* Large Monitor Sizing Combinations */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .ui.grid > .row > [class*="one wide large screen"].column,
+  .ui.grid > .column.row > [class*="one wide large screen"].column,
+  .ui.grid > [class*="one wide large screen"].column,
+  .ui.column.grid > [class*="one wide large screen"].column {
+    width: 6.25% !important;
+  }
+  .ui.grid > .row > [class*="two wide large screen"].column,
+  .ui.grid > .column.row > [class*="two wide large screen"].column,
+  .ui.grid > [class*="two wide large screen"].column,
+  .ui.column.grid > [class*="two wide large screen"].column {
+    width: 12.5% !important;
+  }
+  .ui.grid > .row > [class*="three wide large screen"].column,
+  .ui.grid > .column.row > [class*="three wide large screen"].column,
+  .ui.grid > [class*="three wide large screen"].column,
+  .ui.column.grid > [class*="three wide large screen"].column {
+    width: 18.75% !important;
+  }
+  .ui.grid > .row > [class*="four wide large screen"].column,
+  .ui.grid > .column.row > [class*="four wide large screen"].column,
+  .ui.grid > [class*="four wide large screen"].column,
+  .ui.column.grid > [class*="four wide large screen"].column {
+    width: 25% !important;
+  }
+  .ui.grid > .row > [class*="five wide large screen"].column,
+  .ui.grid > .column.row > [class*="five wide large screen"].column,
+  .ui.grid > [class*="five wide large screen"].column,
+  .ui.column.grid > [class*="five wide large screen"].column {
+    width: 31.25% !important;
+  }
+  .ui.grid > .row > [class*="six wide large screen"].column,
+  .ui.grid > .column.row > [class*="six wide large screen"].column,
+  .ui.grid > [class*="six wide large screen"].column,
+  .ui.column.grid > [class*="six wide large screen"].column {
+    width: 37.5% !important;
+  }
+  .ui.grid > .row > [class*="seven wide large screen"].column,
+  .ui.grid > .column.row > [class*="seven wide large screen"].column,
+  .ui.grid > [class*="seven wide large screen"].column,
+  .ui.column.grid > [class*="seven wide large screen"].column {
+    width: 43.75% !important;
+  }
+  .ui.grid > .row > [class*="eight wide large screen"].column,
+  .ui.grid > .column.row > [class*="eight wide large screen"].column,
+  .ui.grid > [class*="eight wide large screen"].column,
+  .ui.column.grid > [class*="eight wide large screen"].column {
+    width: 50% !important;
+  }
+  .ui.grid > .row > [class*="nine wide large screen"].column,
+  .ui.grid > .column.row > [class*="nine wide large screen"].column,
+  .ui.grid > [class*="nine wide large screen"].column,
+  .ui.column.grid > [class*="nine wide large screen"].column {
+    width: 56.25% !important;
+  }
+  .ui.grid > .row > [class*="ten wide large screen"].column,
+  .ui.grid > .column.row > [class*="ten wide large screen"].column,
+  .ui.grid > [class*="ten wide large screen"].column,
+  .ui.column.grid > [class*="ten wide large screen"].column {
+    width: 62.5% !important;
+  }
+  .ui.grid > .row > [class*="eleven wide large screen"].column,
+  .ui.grid > .column.row > [class*="eleven wide large screen"].column,
+  .ui.grid > [class*="eleven wide large screen"].column,
+  .ui.column.grid > [class*="eleven wide large screen"].column {
+    width: 68.75% !important;
+  }
+  .ui.grid > .row > [class*="twelve wide large screen"].column,
+  .ui.grid > .column.row > [class*="twelve wide large screen"].column,
+  .ui.grid > [class*="twelve wide large screen"].column,
+  .ui.column.grid > [class*="twelve wide large screen"].column {
+    width: 75% !important;
+  }
+  .ui.grid > .row > [class*="thirteen wide large screen"].column,
+  .ui.grid > .column.row > [class*="thirteen wide large screen"].column,
+  .ui.grid > [class*="thirteen wide large screen"].column,
+  .ui.column.grid > [class*="thirteen wide large screen"].column {
+    width: 81.25% !important;
+  }
+  .ui.grid > .row > [class*="fourteen wide large screen"].column,
+  .ui.grid > .column.row > [class*="fourteen wide large screen"].column,
+  .ui.grid > [class*="fourteen wide large screen"].column,
+  .ui.column.grid > [class*="fourteen wide large screen"].column {
+    width: 87.5% !important;
+  }
+  .ui.grid > .row > [class*="fifteen wide large screen"].column,
+  .ui.grid > .column.row > [class*="fifteen wide large screen"].column,
+  .ui.grid > [class*="fifteen wide large screen"].column,
+  .ui.column.grid > [class*="fifteen wide large screen"].column {
+    width: 93.75% !important;
+  }
+  .ui.grid > .row > [class*="sixteen wide large screen"].column,
+  .ui.grid > .column.row > [class*="sixteen wide large screen"].column,
+  .ui.grid > [class*="sixteen wide large screen"].column,
+  .ui.column.grid > [class*="sixteen wide large screen"].column {
+    width: 100% !important;
+  }
+}
+
+/* Widescreen Sizing Combinations */
+@media only screen and (min-width: 1920px) {
+  .ui.grid > .row > [class*="one wide widescreen"].column,
+  .ui.grid > .column.row > [class*="one wide widescreen"].column,
+  .ui.grid > [class*="one wide widescreen"].column,
+  .ui.column.grid > [class*="one wide widescreen"].column {
+    width: 6.25% !important;
+  }
+  .ui.grid > .row > [class*="two wide widescreen"].column,
+  .ui.grid > .column.row > [class*="two wide widescreen"].column,
+  .ui.grid > [class*="two wide widescreen"].column,
+  .ui.column.grid > [class*="two wide widescreen"].column {
+    width: 12.5% !important;
+  }
+  .ui.grid > .row > [class*="three wide widescreen"].column,
+  .ui.grid > .column.row > [class*="three wide widescreen"].column,
+  .ui.grid > [class*="three wide widescreen"].column,
+  .ui.column.grid > [class*="three wide widescreen"].column {
+    width: 18.75% !important;
+  }
+  .ui.grid > .row > [class*="four wide widescreen"].column,
+  .ui.grid > .column.row > [class*="four wide widescreen"].column,
+  .ui.grid > [class*="four wide widescreen"].column,
+  .ui.column.grid > [class*="four wide widescreen"].column {
+    width: 25% !important;
+  }
+  .ui.grid > .row > [class*="five wide widescreen"].column,
+  .ui.grid > .column.row > [class*="five wide widescreen"].column,
+  .ui.grid > [class*="five wide widescreen"].column,
+  .ui.column.grid > [class*="five wide widescreen"].column {
+    width: 31.25% !important;
+  }
+  .ui.grid > .row > [class*="six wide widescreen"].column,
+  .ui.grid > .column.row > [class*="six wide widescreen"].column,
+  .ui.grid > [class*="six wide widescreen"].column,
+  .ui.column.grid > [class*="six wide widescreen"].column {
+    width: 37.5% !important;
+  }
+  .ui.grid > .row > [class*="seven wide widescreen"].column,
+  .ui.grid > .column.row > [class*="seven wide widescreen"].column,
+  .ui.grid > [class*="seven wide widescreen"].column,
+  .ui.column.grid > [class*="seven wide widescreen"].column {
+    width: 43.75% !important;
+  }
+  .ui.grid > .row > [class*="eight wide widescreen"].column,
+  .ui.grid > .column.row > [class*="eight wide widescreen"].column,
+  .ui.grid > [class*="eight wide widescreen"].column,
+  .ui.column.grid > [class*="eight wide widescreen"].column {
+    width: 50% !important;
+  }
+  .ui.grid > .row > [class*="nine wide widescreen"].column,
+  .ui.grid > .column.row > [class*="nine wide widescreen"].column,
+  .ui.grid > [class*="nine wide widescreen"].column,
+  .ui.column.grid > [class*="nine wide widescreen"].column {
+    width: 56.25% !important;
+  }
+  .ui.grid > .row > [class*="ten wide widescreen"].column,
+  .ui.grid > .column.row > [class*="ten wide widescreen"].column,
+  .ui.grid > [class*="ten wide widescreen"].column,
+  .ui.column.grid > [class*="ten wide widescreen"].column {
+    width: 62.5% !important;
+  }
+  .ui.grid > .row > [class*="eleven wide widescreen"].column,
+  .ui.grid > .column.row > [class*="eleven wide widescreen"].column,
+  .ui.grid > [class*="eleven wide widescreen"].column,
+  .ui.column.grid > [class*="eleven wide widescreen"].column {
+    width: 68.75% !important;
+  }
+  .ui.grid > .row > [class*="twelve wide widescreen"].column,
+  .ui.grid > .column.row > [class*="twelve wide widescreen"].column,
+  .ui.grid > [class*="twelve wide widescreen"].column,
+  .ui.column.grid > [class*="twelve wide widescreen"].column {
+    width: 75% !important;
+  }
+  .ui.grid > .row > [class*="thirteen wide widescreen"].column,
+  .ui.grid > .column.row > [class*="thirteen wide widescreen"].column,
+  .ui.grid > [class*="thirteen wide widescreen"].column,
+  .ui.column.grid > [class*="thirteen wide widescreen"].column {
+    width: 81.25% !important;
+  }
+  .ui.grid > .row > [class*="fourteen wide widescreen"].column,
+  .ui.grid > .column.row > [class*="fourteen wide widescreen"].column,
+  .ui.grid > [class*="fourteen wide widescreen"].column,
+  .ui.column.grid > [class*="fourteen wide widescreen"].column {
+    width: 87.5% !important;
+  }
+  .ui.grid > .row > [class*="fifteen wide widescreen"].column,
+  .ui.grid > .column.row > [class*="fifteen wide widescreen"].column,
+  .ui.grid > [class*="fifteen wide widescreen"].column,
+  .ui.column.grid > [class*="fifteen wide widescreen"].column {
+    width: 93.75% !important;
+  }
+  .ui.grid > .row > [class*="sixteen wide widescreen"].column,
+  .ui.grid > .column.row > [class*="sixteen wide widescreen"].column,
+  .ui.grid > [class*="sixteen wide widescreen"].column,
+  .ui.column.grid > [class*="sixteen wide widescreen"].column {
+    width: 100% !important;
+  }
+}
+
+/*----------------------
+        Centered
+-----------------------*/
+
+.ui.centered.grid,
+.ui.centered.grid > .row,
+.ui.grid > .centered.row {
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ui.centered.grid > .column:not(.aligned):not(.justified):not(.row),
+.ui.centered.grid > .row > .column:not(.aligned):not(.justified),
+.ui.grid .centered.row > .column:not(.aligned):not(.justified) {
+  text-align: left;
+}
+.ui.grid > .centered.column,
+.ui.grid > .row > .centered.column {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*----------------------
+        Relaxed
+-----------------------*/
+
+.ui.relaxed.grid > .column:not(.row),
+.ui.relaxed.grid > .row > .column,
+.ui.grid > .relaxed.row > .column {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.ui[class*="very relaxed"].grid > .column:not(.row),
+.ui[class*="very relaxed"].grid > .row > .column,
+.ui.grid > [class*="very relaxed"].row > .column {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/* Coupling with UI Divider */
+.ui.relaxed.grid .row + .ui.divider,
+.ui.grid .relaxed.row + .ui.divider {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.ui[class*="very relaxed"].grid .row + .ui.divider,
+.ui.grid [class*="very relaxed"].row + .ui.divider {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+/*----------------------
+        Padded
+-----------------------*/
+
+.ui.padded.grid:not(.vertically):not(.horizontally) {
+  margin: 0em !important;
+}
+[class*="horizontally padded"].ui.grid {
+  margin-left: 0em !important;
+  margin-right: 0em !important;
+}
+[class*="vertically padded"].ui.grid {
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+}
+
+/*----------------------
+       "Floated"
+-----------------------*/
+
+.ui.grid [class*="left floated"].column {
+  margin-right: auto;
+}
+.ui.grid [class*="right floated"].column {
+  margin-left: auto;
+}
+
+/*----------------------
+        Divided
+-----------------------*/
+
+.ui.divided.grid:not([class*="vertically divided"]) > .column:not(.row),
+.ui.divided.grid:not([class*="vertically divided"]) > .row > .column {
+  box-shadow: -1px 0px 0px 0px rgba(34, 36, 38, 0.15);
+}
+
+/* Swap from padding to margin on columns to have dividers align */
+.ui[class*="vertically divided"].grid > .column:not(.row),
+.ui[class*="vertically divided"].grid > .row > .column {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+.ui[class*="vertically divided"].grid > .row {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/* No divider on first column on row */
+.ui.divided.grid:not([class*="vertically divided"]) > .column:first-child,
+.ui.divided.grid:not([class*="vertically divided"]) > .row > .column:first-child {
+  box-shadow: none;
+}
+
+/* No space on top of first row */
+.ui[class*="vertically divided"].grid > .row:first-child > .column {
+  margin-top: 0em;
+}
+
+/* Divided Row */
+.ui.grid > .divided.row > .column {
+  box-shadow: -1px 0px 0px 0px rgba(34, 36, 38, 0.15);
+}
+.ui.grid > .divided.row > .column:first-child {
+  box-shadow: none;
+}
+
+/* Vertically Divided */
+.ui[class*="vertically divided"].grid > .row {
+  position: relative;
+}
+.ui[class*="vertically divided"].grid > .row:before {
+  position: absolute;
+  content: "";
+  top: 0em;
+  left: 0px;
+  width: calc(100% -  2rem );
+  height: 1px;
+  margin: 0% 1rem;
+  box-shadow: 0px -1px 0px 0px rgba(34, 36, 38, 0.15);
+}
+
+/* Padded Horizontally Divided */
+[class*="horizontally padded"].ui.divided.grid,
+.ui.padded.divided.grid:not(.vertically):not(.horizontally) {
+  width: 100%;
+}
+
+/* First Row Vertically Divided */
+.ui[class*="vertically divided"].grid > .row:first-child:before {
+  box-shadow: none;
+}
+
+/* Inverted Divided */
+.ui.inverted.divided.grid:not([class*="vertically divided"]) > .column:not(.row),
+.ui.inverted.divided.grid:not([class*="vertically divided"]) > .row > .column {
+  box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.1);
+}
+.ui.inverted.divided.grid:not([class*="vertically divided"]) > .column:not(.row):first-child,
+.ui.inverted.divided.grid:not([class*="vertically divided"]) > .row > .column:first-child {
+  box-shadow: none;
+}
+.ui.inverted[class*="vertically divided"].grid > .row:before {
+  box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+/* Relaxed */
+.ui.relaxed[class*="vertically divided"].grid > .row:before {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  width: calc(100% -  3rem );
+}
+.ui[class*="very relaxed"][class*="vertically divided"].grid > .row:before {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  width: calc(100% -  5rem );
+}
+
+/*----------------------
+         Celled
+-----------------------*/
+
+.ui.celled.grid {
+  width: 100%;
+  margin: 1em 0em;
+  box-shadow: 0px 0px 0px 1px #D4D4D5;
+}
+.ui.celled.grid > .row {
+  width: 100% !important;
+  margin: 0em;
+  padding: 0em;
+  box-shadow: 0px -1px 0px 0px #D4D4D5;
+}
+.ui.celled.grid > .column:not(.row),
+.ui.celled.grid > .row > .column {
+  box-shadow: -1px 0px 0px 0px #D4D4D5;
+}
+.ui.celled.grid > .column:first-child,
+.ui.celled.grid > .row > .column:first-child {
+  box-shadow: none;
+}
+.ui.celled.grid > .column:not(.row),
+.ui.celled.grid > .row > .column {
+  padding: 1em;
+}
+.ui.relaxed.celled.grid > .column:not(.row),
+.ui.relaxed.celled.grid > .row > .column {
+  padding: 1.5em;
+}
+.ui[class*="very relaxed"].celled.grid > .column:not(.row),
+.ui[class*="very relaxed"].celled.grid > .row > .column {
+  padding: 2em;
+}
+
+/* Internally Celled */
+.ui[class*="internally celled"].grid {
+  box-shadow: none;
+  margin: 0em;
+}
+.ui[class*="internally celled"].grid > .row:first-child {
+  box-shadow: none;
+}
+.ui[class*="internally celled"].grid > .row > .column:first-child {
+  box-shadow: none;
+}
+
+/*----------------------
+   Vertically Aligned
+-----------------------*/
+
+
+/* Top Aligned */
+.ui[class*="top aligned"].grid > .column:not(.row),
+.ui[class*="top aligned"].grid > .row > .column,
+.ui.grid > [class*="top aligned"].row > .column,
+.ui.grid > [class*="top aligned"].column:not(.row),
+.ui.grid > .row > [class*="top aligned"].column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  vertical-align: top;
+  -webkit-align-self: flex-start !important;
+      -ms-flex-item-align: start !important;
+          align-self: flex-start !important;
+}
+
+/* Middle Aligned */
+.ui[class*="middle aligned"].grid > .column:not(.row),
+.ui[class*="middle aligned"].grid > .row > .column,
+.ui.grid > [class*="middle aligned"].row > .column,
+.ui.grid > [class*="middle aligned"].column:not(.row),
+.ui.grid > .row > [class*="middle aligned"].column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  vertical-align: middle;
+  -webkit-align-self: center !important;
+      -ms-flex-item-align: center !important;
+          align-self: center !important;
+}
+
+/* Bottom Aligned */
+.ui[class*="bottom aligned"].grid > .column:not(.row),
+.ui[class*="bottom aligned"].grid > .row > .column,
+.ui.grid > [class*="bottom aligned"].row > .column,
+.ui.grid > [class*="bottom aligned"].column:not(.row),
+.ui.grid > .row > [class*="bottom aligned"].column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  vertical-align: bottom;
+  -webkit-align-self: flex-end !important;
+      -ms-flex-item-align: end !important;
+          align-self: flex-end !important;
+}
+
+/* Stretched */
+.ui.stretched.grid > .row > .column,
+.ui.stretched.grid > .column,
+.ui.grid > .stretched.row > .column,
+.ui.grid > .stretched.column:not(.row),
+.ui.grid > .row > .stretched.column {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.ui.stretched.grid > .row > .column > *,
+.ui.stretched.grid > .column > *,
+.ui.grid > .stretched.row > .column > *,
+.ui.grid > .stretched.column:not(.row) > *,
+.ui.grid > .row > .stretched.column > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/*----------------------
+  Horizontally Centered
+-----------------------*/
+
+
+/* Left Aligned */
+.ui[class*="left aligned"].grid > .column,
+.ui[class*="left aligned"].grid > .row > .column,
+.ui.grid > [class*="left aligned"].row > .column,
+.ui.grid > [class*="left aligned"].column.column,
+.ui.grid > .row > [class*="left aligned"].column.column {
+  text-align: left;
+  -webkit-align-self: inherit;
+      -ms-flex-item-align: inherit;
+          align-self: inherit;
+}
+
+/* Center Aligned */
+.ui[class*="center aligned"].grid > .column,
+.ui[class*="center aligned"].grid > .row > .column,
+.ui.grid > [class*="center aligned"].row > .column,
+.ui.grid > [class*="center aligned"].column.column,
+.ui.grid > .row > [class*="center aligned"].column.column {
+  text-align: center;
+  -webkit-align-self: inherit;
+      -ms-flex-item-align: inherit;
+          align-self: inherit;
+}
+.ui[class*="center aligned"].grid {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Right Aligned */
+.ui[class*="right aligned"].grid > .column,
+.ui[class*="right aligned"].grid > .row > .column,
+.ui.grid > [class*="right aligned"].row > .column,
+.ui.grid > [class*="right aligned"].column.column,
+.ui.grid > .row > [class*="right aligned"].column.column {
+  text-align: right;
+  -webkit-align-self: inherit;
+      -ms-flex-item-align: inherit;
+          align-self: inherit;
+}
+
+/* Justified */
+.ui.justified.grid > .column,
+.ui.justified.grid > .row > .column,
+.ui.grid > .justified.row > .column,
+.ui.grid > .justified.column.column,
+.ui.grid > .row > .justified.column.column {
+  text-align: justify;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+/*----------------------
+         Colored
+-----------------------*/
+
+.ui.grid > .row > .red.column,
+.ui.grid > .row > .orange.column,
+.ui.grid > .row > .yellow.column,
+.ui.grid > .row > .olive.column,
+.ui.grid > .row > .green.column,
+.ui.grid > .row > .teal.column,
+.ui.grid > .row > .blue.column,
+.ui.grid > .row > .violet.column,
+.ui.grid > .row > .purple.column,
+.ui.grid > .row > .pink.column,
+.ui.grid > .row > .brown.column,
+.ui.grid > .row > .grey.column,
+.ui.grid > .row > .black.column {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Red */
+.ui.grid > .red.row,
+.ui.grid > .red.column,
+.ui.grid > .row > .red.column {
+  background-color: #DB2828 !important;
+  color: #FFFFFF;
+}
+
+/* Orange */
+.ui.grid > .orange.row,
+.ui.grid > .orange.column,
+.ui.grid > .row > .orange.column {
+  background-color: #F2711C !important;
+  color: #FFFFFF;
+}
+
+/* Yellow */
+.ui.grid > .yellow.row,
+.ui.grid > .yellow.column,
+.ui.grid > .row > .yellow.column {
+  background-color: #FBBD08 !important;
+  color: #FFFFFF;
+}
+
+/* Olive */
+.ui.grid > .olive.row,
+.ui.grid > .olive.column,
+.ui.grid > .row > .olive.column {
+  background-color: #B5CC18 !important;
+  color: #FFFFFF;
+}
+
+/* Green */
+.ui.grid > .green.row,
+.ui.grid > .green.column,
+.ui.grid > .row > .green.column {
+  background-color: #21BA45 !important;
+  color: #FFFFFF;
+}
+
+/* Teal */
+.ui.grid > .teal.row,
+.ui.grid > .teal.column,
+.ui.grid > .row > .teal.column {
+  background-color: #00B5AD !important;
+  color: #FFFFFF;
+}
+
+/* Blue */
+.ui.grid > .blue.row,
+.ui.grid > .blue.column,
+.ui.grid > .row > .blue.column {
+  background-color: #2185D0 !important;
+  color: #FFFFFF;
+}
+
+/* Violet */
+.ui.grid > .violet.row,
+.ui.grid > .violet.column,
+.ui.grid > .row > .violet.column {
+  background-color: #6435C9 !important;
+  color: #FFFFFF;
+}
+
+/* Purple */
+.ui.grid > .purple.row,
+.ui.grid > .purple.column,
+.ui.grid > .row > .purple.column {
+  background-color: #A333C8 !important;
+  color: #FFFFFF;
+}
+
+/* Pink */
+.ui.grid > .pink.row,
+.ui.grid > .pink.column,
+.ui.grid > .row > .pink.column {
+  background-color: #E03997 !important;
+  color: #FFFFFF;
+}
+
+/* Brown */
+.ui.grid > .brown.row,
+.ui.grid > .brown.column,
+.ui.grid > .row > .brown.column {
+  background-color: #A5673F !important;
+  color: #FFFFFF;
+}
+
+/* Grey */
+.ui.grid > .grey.row,
+.ui.grid > .grey.column,
+.ui.grid > .row > .grey.column {
+  background-color: #767676 !important;
+  color: #FFFFFF;
+}
+
+/* Black */
+.ui.grid > .black.row,
+.ui.grid > .black.column,
+.ui.grid > .row > .black.column {
+  background-color: #1B1C1D !important;
+  color: #FFFFFF;
+}
+
+/*----------------------
+      Equal Width
+-----------------------*/
+
+.ui[class*="equal width"].grid > .column:not(.row),
+.ui[class*="equal width"].grid > .row > .column,
+.ui.grid > [class*="equal width"].row > .column {
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.ui[class*="equal width"].grid > .wide.column,
+.ui[class*="equal width"].grid > .row > .wide.column,
+.ui.grid > [class*="equal width"].row > .wide.column {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+/*----------------------
+        Reverse
+-----------------------*/
+
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .ui[class*="mobile reversed"].grid,
+  .ui[class*="mobile reversed"].grid > .row,
+  .ui.grid > [class*="mobile reversed"].row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .ui[class*="mobile vertically reversed"].grid,
+  .ui.stackable[class*="mobile reversed"] {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  
+/* Divided Reversed */
+  .ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"]) > .column:first-child,
+  .ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"]) > .row > .column:first-child {
+    box-shadow: -1px 0px 0px 0px rgba(34, 36, 38, 0.15);
+  }
+  .ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"]) > .column:last-child,
+  .ui[class*="mobile reversed"].divided.grid:not([class*="vertically divided"]) > .row > .column:last-child {
+    box-shadow: none;
+  }
+  
+/* Vertically Divided Reversed */
+  .ui.grid[class*="vertically divided"][class*="mobile vertically reversed"] > .row:first-child:before {
+    box-shadow: 0px -1px 0px 0px rgba(34, 36, 38, 0.15);
+  }
+  .ui.grid[class*="vertically divided"][class*="mobile vertically reversed"] > .row:last-child:before {
+    box-shadow: none;
+  }
+  
+/* Celled Reversed */
+  .ui[class*="mobile reversed"].celled.grid > .row > .column:first-child {
+    box-shadow: -1px 0px 0px 0px #D4D4D5;
+  }
+  .ui[class*="mobile reversed"].celled.grid > .row > .column:last-child {
+    box-shadow: none;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui[class*="tablet reversed"].grid,
+  .ui[class*="tablet reversed"].grid > .row,
+  .ui.grid > [class*="tablet reversed"].row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .ui[class*="tablet vertically reversed"].grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  
+/* Divided Reversed */
+  .ui[class*="tablet reversed"].divided.grid:not([class*="vertically divided"]) > .column:first-child,
+  .ui[class*="tablet reversed"].divided.grid:not([class*="vertically divided"]) > .row > .column:first-child {
+    box-shadow: -1px 0px 0px 0px rgba(34, 36, 38, 0.15);
+  }
+  .ui[class*="tablet reversed"].divided.grid:not([class*="vertically divided"]) > .column:last-child,
+  .ui[class*="tablet reversed"].divided.grid:not([class*="vertically divided"]) > .row > .column:last-child {
+    box-shadow: none;
+  }
+  
+/* Vertically Divided Reversed */
+  .ui.grid[class*="vertically divided"][class*="tablet vertically reversed"] > .row:first-child:before {
+    box-shadow: 0px -1px 0px 0px rgba(34, 36, 38, 0.15);
+  }
+  .ui.grid[class*="vertically divided"][class*="tablet vertically reversed"] > .row:last-child:before {
+    box-shadow: none;
+  }
+  
+/* Celled Reversed */
+  .ui[class*="tablet reversed"].celled.grid > .row > .column:first-child {
+    box-shadow: -1px 0px 0px 0px #D4D4D5;
+  }
+  .ui[class*="tablet reversed"].celled.grid > .row > .column:last-child {
+    box-shadow: none;
+  }
+}
+
+/* Computer */
+@media only screen and (min-width: 992px) {
+  .ui[class*="computer reversed"].grid,
+  .ui[class*="computer reversed"].grid > .row,
+  .ui.grid > [class*="computer reversed"].row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .ui[class*="computer vertically reversed"].grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  
+/* Divided Reversed */
+  .ui[class*="computer reversed"].divided.grid:not([class*="vertically divided"]) > .column:first-child,
+  .ui[class*="computer reversed"].divided.grid:not([class*="vertically divided"]) > .row > .column:first-child {
+    box-shadow: -1px 0px 0px 0px rgba(34, 36, 38, 0.15);
+  }
+  .ui[class*="computer reversed"].divided.grid:not([class*="vertically divided"]) > .column:last-child,
+  .ui[class*="computer reversed"].divided.grid:not([class*="vertically divided"]) > .row > .column:last-child {
+    box-shadow: none;
+  }
+  
+/* Vertically Divided Reversed */
+  .ui.grid[class*="vertically divided"][class*="computer vertically reversed"] > .row:first-child:before {
+    box-shadow: 0px -1px 0px 0px rgba(34, 36, 38, 0.15);
+  }
+  .ui.grid[class*="vertically divided"][class*="computer vertically reversed"] > .row:last-child:before {
+    box-shadow: none;
+  }
+  
+/* Celled Reversed */
+  .ui[class*="computer reversed"].celled.grid > .row > .column:first-child {
+    box-shadow: -1px 0px 0px 0px #D4D4D5;
+  }
+  .ui[class*="computer reversed"].celled.grid > .row > .column:last-child {
+    box-shadow: none;
+  }
+}
+
+/*-------------------
+      Doubling
+--------------------*/
+
+
+/* Tablet Only */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.doubling.grid {
+    width: auto;
+  }
+  .ui.grid > .doubling.row,
+  .ui.doubling.grid > .row {
+    margin: 0em !important;
+    padding: 0em !important;
+  }
+  .ui.grid > .doubling.row > .column,
+  .ui.doubling.grid > .row > .column {
+    display: inline-block !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    box-shadow: none !important;
+    margin: 0em;
+  }
+  .ui[class*="two column"].doubling.grid > .row > .column,
+  .ui[class*="two column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="two column"].doubling.row.row > .column {
+    width: 100% !important;
+  }
+  .ui[class*="three column"].doubling.grid > .row > .column,
+  .ui[class*="three column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="three column"].doubling.row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="four column"].doubling.grid > .row > .column,
+  .ui[class*="four column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="four column"].doubling.row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="five column"].doubling.grid > .row > .column,
+  .ui[class*="five column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="five column"].doubling.row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="six column"].doubling.grid > .row > .column,
+  .ui[class*="six column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="six column"].doubling.row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="seven column"].doubling.grid > .row > .column,
+  .ui[class*="seven column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="seven column"].doubling.row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="eight column"].doubling.grid > .row > .column,
+  .ui[class*="eight column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="eight column"].doubling.row.row > .column {
+    width: 25% !important;
+  }
+  .ui[class*="nine column"].doubling.grid > .row > .column,
+  .ui[class*="nine column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="nine column"].doubling.row.row > .column {
+    width: 25% !important;
+  }
+  .ui[class*="ten column"].doubling.grid > .row > .column,
+  .ui[class*="ten column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="ten column"].doubling.row.row > .column {
+    width: 20% !important;
+  }
+  .ui[class*="eleven column"].doubling.grid > .row > .column,
+  .ui[class*="eleven column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="eleven column"].doubling.row.row > .column {
+    width: 20% !important;
+  }
+  .ui[class*="twelve column"].doubling.grid > .row > .column,
+  .ui[class*="twelve column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="twelve column"].doubling.row.row > .column {
+    width: 16.66666667% !important;
+  }
+  .ui[class*="thirteen column"].doubling.grid > .row > .column,
+  .ui[class*="thirteen column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="thirteen column"].doubling.row.row > .column {
+    width: 16.66666667% !important;
+  }
+  .ui[class*="fourteen column"].doubling.grid > .row > .column,
+  .ui[class*="fourteen column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="fourteen column"].doubling.row.row > .column {
+    width: 14.28571429% !important;
+  }
+  .ui[class*="fifteen column"].doubling.grid > .row > .column,
+  .ui[class*="fifteen column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="fifteen column"].doubling.row.row > .column {
+    width: 14.28571429% !important;
+  }
+  .ui[class*="sixteen column"].doubling.grid > .row > .column,
+  .ui[class*="sixteen column"].doubling.grid > .column:not(.row),
+  .ui.grid > [class*="sixteen column"].doubling.row.row > .column {
+    width: 12.5% !important;
+  }
+}
+
+/* Mobile Only */
+@media only screen and (max-width: 767px) {
+  .ui.grid > .doubling.row,
+  .ui.doubling.grid > .row {
+    margin: 0em !important;
+    padding: 0em !important;
+  }
+  .ui.grid > .doubling.row > .column,
+  .ui.doubling.grid > .row > .column {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    margin: 0em !important;
+    box-shadow: none !important;
+  }
+  .ui[class*="two column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="two column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="two column"].doubling:not(.stackable).row.row > .column {
+    width: 100% !important;
+  }
+  .ui[class*="three column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="three column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="three column"].doubling:not(.stackable).row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="four column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="four column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="four column"].doubling:not(.stackable).row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="five column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="five column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="five column"].doubling:not(.stackable).row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="six column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="six column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="six column"].doubling:not(.stackable).row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="seven column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="seven column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="seven column"].doubling:not(.stackable).row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="eight column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="eight column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="eight column"].doubling:not(.stackable).row.row > .column {
+    width: 50% !important;
+  }
+  .ui[class*="nine column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="nine column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="nine column"].doubling:not(.stackable).row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="ten column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="ten column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="ten column"].doubling:not(.stackable).row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="eleven column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="eleven column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="eleven column"].doubling:not(.stackable).row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="twelve column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="twelve column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="twelve column"].doubling:not(.stackable).row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="thirteen column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="thirteen column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="thirteen column"].doubling:not(.stackable).row.row > .column {
+    width: 33.33333333% !important;
+  }
+  .ui[class*="fourteen column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="fourteen column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="fourteen column"].doubling:not(.stackable).row.row > .column {
+    width: 25% !important;
+  }
+  .ui[class*="fifteen column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="fifteen column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="fifteen column"].doubling:not(.stackable).row.row > .column {
+    width: 25% !important;
+  }
+  .ui[class*="sixteen column"].doubling:not(.stackable).grid > .row > .column,
+  .ui[class*="sixteen column"].doubling:not(.stackable).grid > .column:not(.row),
+  .ui.grid > [class*="sixteen column"].doubling:not(.stackable).row.row > .column {
+    width: 25% !important;
+  }
+}
+
+/*-------------------
+      Stackable
+--------------------*/
+
+@media only screen and (max-width: 767px) {
+  .ui.stackable.grid {
+    width: auto;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+  }
+  .ui.stackable.grid > .row > .wide.column,
+  .ui.stackable.grid > .wide.column,
+  .ui.stackable.grid > .column.grid > .column,
+  .ui.stackable.grid > .column.row > .column,
+  .ui.stackable.grid > .row > .column,
+  .ui.stackable.grid > .column:not(.row),
+  .ui.grid > .stackable.stackable.row > .column {
+    width: 100% !important;
+    margin: 0em 0em !important;
+    box-shadow: none !important;
+    padding: 1rem 1rem !important;
+  }
+  .ui.stackable.grid:not(.vertically) > .row {
+    margin: 0em;
+    padding: 0em;
+  }
+  
+/* Coupling */
+  .ui.container > .ui.stackable.grid > .column,
+  .ui.container > .ui.stackable.grid > .row > .column {
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+  }
+  
+/* Don't pad inside segment or nested grid */
+  .ui.grid .ui.stackable.grid,
+  .ui.segment:not(.vertical) .ui.stackable.page.grid {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+  }
+  
+/* Divided Stackable */
+  .ui.stackable.divided.grid > .row:first-child > .column:first-child,
+  .ui.stackable.celled.grid > .row:first-child > .column:first-child,
+  .ui.stackable.divided.grid > .column:not(.row):first-child,
+  .ui.stackable.celled.grid > .column:not(.row):first-child {
+    border-top: none !important;
+  }
+  .ui.inverted.stackable.celled.grid > .column:not(.row),
+  .ui.inverted.stackable.divided.grid > .column:not(.row),
+  .ui.inverted.stackable.celled.grid > .row > .column,
+  .ui.inverted.stackable.divided.grid > .row > .column {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .ui.stackable.celled.grid > .column:not(.row),
+  .ui.stackable.divided:not(.vertically).grid > .column:not(.row),
+  .ui.stackable.celled.grid > .row > .column,
+  .ui.stackable.divided:not(.vertically).grid > .row > .column {
+    border-top: 1px solid rgba(34, 36, 38, 0.15);
+    box-shadow: none !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .ui.stackable.celled.grid > .row {
+    box-shadow: none !important;
+  }
+  .ui.stackable.divided:not(.vertically).grid > .column:not(.row),
+  .ui.stackable.divided:not(.vertically).grid > .row > .column {
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+  }
+}
+
+/*----------------------
+     Only (Device)
+-----------------------*/
+
+
+/* These include arbitrary class repetitions for forced specificity */
+
+/* Mobile Only Hide */
+@media only screen and (max-width: 767px) {
+  .ui[class*="tablet only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="tablet only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="tablet only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.mobile) {
+    display: none !important;
+  }
+  .ui[class*="computer only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="computer only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="computer only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="computer only"].column:not(.mobile) {
+    display: none !important;
+  }
+  .ui[class*="large screen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="large screen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="large screen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.mobile) {
+    display: none !important;
+  }
+  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Tablet Only Hide */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui[class*="mobile only"].grid.grid.grid:not(.tablet),
+  .ui.grid.grid.grid > [class*="mobile only"].row:not(.tablet),
+  .ui.grid.grid.grid > [class*="mobile only"].column:not(.tablet),
+  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.tablet) {
+    display: none !important;
+  }
+  .ui[class*="computer only"].grid.grid.grid:not(.tablet),
+  .ui.grid.grid.grid > [class*="computer only"].row:not(.tablet),
+  .ui.grid.grid.grid > [class*="computer only"].column:not(.tablet),
+  .ui.grid.grid.grid > .row > [class*="computer only"].column:not(.tablet) {
+    display: none !important;
+  }
+  .ui[class*="large screen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="large screen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="large screen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.mobile) {
+    display: none !important;
+  }
+  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Computer Only Hide */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ui[class*="mobile only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.computer) {
+    display: none !important;
+  }
+  .ui[class*="tablet only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="tablet only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="tablet only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.computer) {
+    display: none !important;
+  }
+  .ui[class*="large screen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="large screen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="large screen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="large screen only"].column:not(.mobile) {
+    display: none !important;
+  }
+  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Large Screen Only Hide */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .ui[class*="mobile only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.computer) {
+    display: none !important;
+  }
+  .ui[class*="tablet only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="tablet only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="tablet only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.computer) {
+    display: none !important;
+  }
+  .ui[class*="widescreen only"].grid.grid.grid:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].row:not(.mobile),
+  .ui.grid.grid.grid > [class*="widescreen only"].column:not(.mobile),
+  .ui.grid.grid.grid > .row > [class*="widescreen only"].column:not(.mobile) {
+    display: none !important;
+  }
+}
+
+/* Widescreen Only Hide */
+@media only screen and (min-width: 1920px) {
+  .ui[class*="mobile only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="mobile only"].column:not(.computer) {
+    display: none !important;
+  }
+  .ui[class*="tablet only"].grid.grid.grid:not(.computer),
+  .ui.grid.grid.grid > [class*="tablet only"].row:not(.computer),
+  .ui.grid.grid.grid > [class*="tablet only"].column:not(.computer),
+  .ui.grid.grid.grid > .row > [class*="tablet only"].column:not(.computer) {
+    display: none !important;
+  }
 }
 
 
@@ -4786,8 +8388,8 @@ img.ui.bordered.image {
   position: relative;
   top: 0em;
   margin: -0.5em 0em;
-  padding-bottom: 0.71428571em;
-  padding-top: 0.71428571em;
+  padding-bottom: 0.78571429em;
+  padding-top: 0.78571429em;
   font-size: 1em;
 }
 
@@ -4848,17 +8450,6 @@ img.ui.bordered.image {
 }
 
 /*--------------
-     Popup
----------------*/
-
-.ui.menu .ui.popup {
-  display: none;
-}
-.ui.menu .ui.visible.popup {
-  display: block;
-}
-
-/*--------------
     Dropdowns
 ---------------*/
 
@@ -4890,7 +8481,7 @@ img.ui.bordered.image {
   margin: 0;
   text-align: left;
   font-size: 1em !important;
-  padding: 0.71428571em 1.14285714em !important;
+  padding: 0.78571429em 1.14285714em !important;
   background: transparent !important;
   color: rgba(0, 0, 0, 0.87) !important;
   text-transform: none !important;
@@ -4947,12 +8538,17 @@ img.ui.bordered.image {
   margin-left: 1em;
 }
 .ui.vertical.menu .dropdown.item .menu {
-  top: 0% !important;
   left: 100%;
   min-width: 0;
   margin: 0em 0em 0em 0em;
   box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
   border-radius: 0em 0.28571429rem 0.28571429rem 0.28571429rem;
+}
+.ui.vertical.menu .dropdown.item.upward .menu {
+  bottom: 0;
+}
+.ui.vertical.menu .dropdown.item:not(.upward) .menu {
+  top: 0;
 }
 .ui.vertical.menu .active.dropdown.item {
   border-top-right-radius: 0em;
@@ -4975,17 +8571,17 @@ img.ui.bordered.image {
   background: #999999;
   color: #FFFFFF;
   margin-left: 1em;
-  padding: 0.3em 0.71428571em;
+  padding: 0.3em 0.78571429em;
 }
 .ui.vertical.menu .item > .label {
   background: #999999;
   color: #FFFFFF;
   margin-top: -0.15em;
   margin-bottom: -0.15em;
-  padding: 0.3em 0.71428571em;
+  padding: 0.3em 0.78571429em;
 }
 .ui.menu .item > .floating.label {
-  padding: 0.3em 0.71428571em;
+  padding: 0.3em 0.78571429em;
 }
 
 /*--------------
@@ -5201,8 +8797,8 @@ Floated Menu / Item
   top: 0%;
   left: 0px;
   width: 100%;
-  background: rgba(34, 36, 38, 0.1);
   height: 1px;
+  background: rgba(34, 36, 38, 0.1);
 }
 .ui.vertical.menu .item:first-child:before {
   display: none !important;
@@ -5300,7 +8896,9 @@ Floated Menu / Item
 .ui.tabular.menu + .attached:not(.top).segment,
 .ui.tabular.menu + .attached:not(.top).segment + .attached:not(.top).segment {
   border-top: none;
-  margin: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
   width: 100%;
 }
 .top.attached.segment + .ui.bottom.tabular.menu {
@@ -5446,7 +9044,7 @@ Floated Menu / Item
           align-self: center;
   box-shadow: none;
   border: none;
-  padding: 0.71428571em 0.92857143em;
+  padding: 0.78571429em 0.92857143em;
   margin: 0em 0.35714286em;
   background: none;
   -webkit-transition: color 0.1s ease;
@@ -5661,7 +9259,8 @@ Floated Menu / Item
 }
 
 /* Hover */
-.ui.secondary.inverted.pointing.menu .item:hover {
+.ui.secondary.inverted.pointing.menu .link.item:hover,
+.ui.secondary.inverted.pointing.menu a.item:hover {
   color: rgba(0, 0, 0, 0.95);
 }
 
@@ -5736,6 +9335,8 @@ Floated Menu / Item
 }
 .ui.vertical.text.menu .item {
   margin: 0.57142857em 0em;
+  padding-left: 0em;
+  padding-right: 0em;
 }
 .ui.vertical.text.menu .item > i.icon {
   float: none;
@@ -5908,8 +9509,16 @@ Floated Menu / Item
     bottom: 0px;
     left: 0px;
     width: 100%;
-    background: rgba(34, 36, 38, 0.1);
     height: 1px;
+    background: rgba(34, 36, 38, 0.1);
+  }
+  .ui.stackable.menu .left.menu,
+  .ui.stackable.menu .left.item {
+    margin-right: 0 !important;
+  }
+  .ui.stackable.menu .right.menu,
+  .ui.stackable.menu .right.item {
+    margin-left: 0 !important;
   }
 }
 
@@ -6047,8 +9656,7 @@ Floated Menu / Item
 /*--- Pressed ---*/
 
 .ui.inverted.menu a.item:active,
-.ui.inverted.menu .link.item:active,
-.ui.inverted.menu a.item:active {
+.ui.inverted.menu .link.item:active {
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
 }
@@ -6575,6 +10183,22 @@ Floated Menu / Item
 ---------------*/
 
 
+/* Mini */
+.ui.mini.menu {
+  font-size: 0.78571429rem;
+}
+.ui.mini.vertical.menu {
+  width: 9rem;
+}
+
+/* Tiny */
+.ui.tiny.menu {
+  font-size: 0.85714286rem;
+}
+.ui.tiny.vertical.menu {
+  width: 11rem;
+}
+
 /* Small */
 .ui.small.menu {
   font-size: 0.92857143rem;
@@ -6593,7 +10217,7 @@ Floated Menu / Item
 
 /* Large */
 .ui.large.menu {
-  font-size: 1.14285714rem;
+  font-size: 1.07142857rem;
 }
 .ui.large.vertical.menu {
   width: 18rem;
@@ -6601,10 +10225,26 @@ Floated Menu / Item
 
 /* Huge */
 .ui.huge.menu {
-  font-size: 1.42857143rem;
+  font-size: 1.14285714rem;
 }
 .ui.huge.vertical.menu {
   width: 20rem;
+}
+
+/* Big */
+.ui.big.menu {
+  font-size: 1.21428571rem;
+}
+.ui.big.vertical.menu {
+  width: 22rem;
+}
+
+/* Massive */
+.ui.massive.menu {
+  font-size: 1.28571429rem;
+}
+.ui.massive.vertical.menu {
+  width: 25rem;
 }
 
 
@@ -6616,6 +10256,487 @@ Floated Menu / Item
 
 /*******************************
          Site Overrides
+*******************************/
+
+/*!
+ * # Semantic UI 2.2.3 - Item
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Standard
+*******************************/
+
+
+/*--------------
+      Item
+---------------*/
+
+.ui.items > .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0em;
+  width: 100%;
+  min-height: 0px;
+  background: transparent;
+  padding: 0em;
+  border: none;
+  border-radius: 0rem;
+  box-shadow: none;
+  -webkit-transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease;
+  z-index: '';
+}
+.ui.items > .item a {
+  cursor: pointer;
+}
+
+/*--------------
+      Items
+---------------*/
+
+.ui.items {
+  margin: 1.5em 0em;
+}
+.ui.items:first-child {
+  margin-top: 0em !important;
+}
+.ui.items:last-child {
+  margin-bottom: 0em !important;
+}
+
+/*--------------
+      Item
+---------------*/
+
+.ui.items > .item:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.ui.items > .item:first-child {
+  margin-top: 0em;
+}
+.ui.items > .item:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+     Images
+---------------*/
+
+.ui.items > .item > .image {
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: block;
+  float: none;
+  margin: 0em;
+  padding: 0em;
+  max-height: '';
+  -webkit-align-self: top;
+      -ms-flex-item-align: top;
+          align-self: top;
+}
+.ui.items > .item > .image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.125rem;
+  border: none;
+}
+.ui.items > .item > .image:only-child > img {
+  border-radius: 0rem;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.items > .item > .content {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background: none;
+  margin: 0em;
+  padding: 0em;
+  box-shadow: none;
+  font-size: 1em;
+  border: none;
+  border-radius: 0em;
+}
+.ui.items > .item > .content:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.ui.items > .item > .image + .content {
+  min-width: 0;
+  width: auto;
+  display: block;
+  margin-left: 0em;
+  -webkit-align-self: top;
+      -ms-flex-item-align: top;
+          align-self: top;
+  padding-left: 1.5em;
+}
+.ui.items > .item > .content > .header {
+  display: inline-block;
+  margin: -0.21425em 0em 0em;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* Default Header Size */
+.ui.items > .item > .content > .header:not(.ui) {
+  font-size: 1.28571429em;
+}
+
+/*--------------
+     Floated
+---------------*/
+
+.ui.items > .item [class*="left floated"] {
+  float: left;
+}
+.ui.items > .item [class*="right floated"] {
+  float: right;
+}
+
+/*--------------
+  Content Image
+---------------*/
+
+.ui.items > .item .content img {
+  -webkit-align-self: middle;
+      -ms-flex-item-align: middle;
+          align-self: middle;
+  width: '';
+}
+.ui.items > .item img.avatar,
+.ui.items > .item .avatar img {
+  width: '';
+  height: '';
+  border-radius: 500rem;
+}
+
+/*--------------
+   Description
+---------------*/
+
+.ui.items > .item > .content > .description {
+  margin-top: 0.6em;
+  max-width: auto;
+  font-size: 1em;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*--------------
+    Paragraph
+---------------*/
+
+.ui.items > .item > .content p {
+  margin: 0em 0em 0.5em;
+}
+.ui.items > .item > .content p:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+      Meta
+---------------*/
+
+.ui.items > .item .meta {
+  margin: 0.5em 0em 0.5em;
+  font-size: 1em;
+  line-height: 1em;
+  color: rgba(0, 0, 0, 0.6);
+}
+.ui.items > .item .meta * {
+  margin-right: 0.3em;
+}
+.ui.items > .item .meta :last-child {
+  margin-right: 0em;
+}
+.ui.items > .item .meta [class*="right floated"] {
+  margin-right: 0em;
+  margin-left: 0.3em;
+}
+
+/*--------------
+      Links
+---------------*/
+
+
+/* Generic */
+.ui.items > .item > .content a:not(.ui) {
+  color: '';
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+.ui.items > .item > .content a:not(.ui):hover {
+  color: '';
+}
+
+/* Header */
+.ui.items > .item > .content > a.header {
+  color: rgba(0, 0, 0, 0.85);
+}
+.ui.items > .item > .content > a.header:hover {
+  color: #1e70bf;
+}
+
+/* Meta */
+.ui.items > .item .meta > a:not(.ui) {
+  color: rgba(0, 0, 0, 0.4);
+}
+.ui.items > .item .meta > a:not(.ui):hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*--------------
+     Labels
+---------------*/
+
+
+/*-----Star----- */
+
+
+/* Icon */
+.ui.items > .item > .content .favorite.icon {
+  cursor: pointer;
+  opacity: 0.75;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+.ui.items > .item > .content .favorite.icon:hover {
+  opacity: 1;
+  color: #FFB70A;
+}
+.ui.items > .item > .content .active.favorite.icon {
+  color: #FFE623;
+}
+
+/*-----Like----- */
+
+
+/* Icon */
+.ui.items > .item > .content .like.icon {
+  cursor: pointer;
+  opacity: 0.75;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+.ui.items > .item > .content .like.icon:hover {
+  opacity: 1;
+  color: #FF2733;
+}
+.ui.items > .item > .content .active.like.icon {
+  color: #FF2733;
+}
+
+/*----------------
+  Extra Content
+-----------------*/
+
+.ui.items > .item .extra {
+  display: block;
+  position: relative;
+  background: none;
+  margin: 0.5rem 0em 0em;
+  width: 100%;
+  padding: 0em 0em 0em;
+  top: 0em;
+  left: 0em;
+  color: rgba(0, 0, 0, 0.4);
+  box-shadow: none;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+  border-top: none;
+}
+.ui.items > .item .extra > * {
+  margin: 0.25rem 0.5rem 0.25rem 0em;
+}
+.ui.items > .item .extra > [class*="right floated"] {
+  margin: 0.25rem 0em 0.25rem 0.5rem;
+}
+.ui.items > .item .extra:after {
+  display: block;
+  content: ' ';
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+
+/*******************************
+          Responsive
+*******************************/
+
+
+/* Default Image Width */
+.ui.items > .item > .image:not(.ui) {
+  width: 175px;
+}
+
+/* Tablet Only */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ui.items > .item {
+    margin: 1em 0em;
+  }
+  .ui.items > .item > .image:not(.ui) {
+    width: 150px;
+  }
+  .ui.items > .item > .image + .content {
+    display: block;
+    padding: 0em 0em 0em 1em;
+  }
+}
+
+/* Mobile Only */
+@media only screen and (max-width: 767px) {
+  .ui.items > .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 2em 0em;
+  }
+  .ui.items > .item > .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui.items > .item > .image,
+  .ui.items > .item > .image > img {
+    max-width: 100% !important;
+    width: auto !important;
+    max-height: 250px !important;
+  }
+  .ui.items > .item > .image + .content {
+    display: block;
+    padding: 1.5em 0em 0em;
+  }
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*-------------------
+       Aligned
+--------------------*/
+
+.ui.items > .item > .image + [class*="top aligned"].content {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+.ui.items > .item > .image + [class*="middle aligned"].content {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+.ui.items > .item > .image + [class*="bottom aligned"].content {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+/*--------------
+     Relaxed
+---------------*/
+
+.ui.relaxed.items > .item {
+  margin: 1.5em 0em;
+}
+.ui[class*="very relaxed"].items > .item {
+  margin: 2em 0em;
+}
+
+/*-------------------
+      Divided
+--------------------*/
+
+.ui.divided.items > .item {
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  margin: 0em;
+  padding: 1em 0em;
+}
+.ui.divided.items > .item:first-child {
+  border-top: none;
+  margin-top: 0em !important;
+  padding-top: 0em !important;
+}
+.ui.divided.items > .item:last-child {
+  margin-bottom: 0em !important;
+  padding-bottom: 0em !important;
+}
+
+/* Relaxed Divided */
+.ui.relaxed.divided.items > .item {
+  margin: 0em;
+  padding: 1.5em 0em;
+}
+.ui[class*="very relaxed"].divided.items > .item {
+  margin: 0em;
+  padding: 2em 0em;
+}
+
+/*-------------------
+        Link
+--------------------*/
+
+.ui.items a.item:hover,
+.ui.link.items > .item:hover {
+  cursor: pointer;
+}
+.ui.items a.item:hover .content .header,
+.ui.link.items > .item:hover .content .header {
+  color: #1e70bf;
+}
+
+/*--------------
+      Size
+---------------*/
+
+.ui.items > .item {
+  font-size: 1em;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+    User Variable Overrides
 *******************************/
 
 /* Contains your custom styles */
@@ -6640,7 +10761,6 @@ Floated Menu / Item
 /*@import '~semantic-ui-flag/flag.css';*/
 /*@import '~semantic-ui-input/input.css';*/
 /*@import '~semantic-ui-label/label.css';*/
-/*@import '~semantic-ui-list/list.css';*/
 /*@import '~semantic-ui-rail/rail.css';*/
 /*@import '~semantic-ui-reveal/reveal.css';*/
 /*@import '~semantic-ui-segment/segment.css';*/
@@ -6649,7 +10769,6 @@ Floated Menu / Item
 /* Semantic UI Collections */
 /*@import '~semantic-ui-breadcrumb/breadcrumb.css';*/
 /*@import '~semantic-ui-form/form.css';*/
-/*@import '~semantic-ui-grid/grid.css';*/
 /*@import '~semantic-ui-message/message.css';*/
 /*@import '~semantic-ui-table/table.css';*/
 
@@ -6658,7 +10777,6 @@ Floated Menu / Item
 /*@import '~semantic-ui-card/card.css';*/
 /*@import '~semantic-ui-comment/comment.css';*/
 /*@import '~semantic-ui-feed/feed.css';*/
-/*@import '~semantic-ui-item/item.css';*/
 /*@import '~semantic-ui-statistic/statistic.css';*/
 
 /* Semantic UI Modules */
@@ -6679,4 +10797,4 @@ Floated Menu / Item
 /*@import '~semantic-ui-tab/tab.css';*/
 /*@import '~semantic-ui-transition/transition.css';*/
 
-/* User custom styles */ 
+/* User custom styles */
