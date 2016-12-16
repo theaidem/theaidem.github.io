@@ -75,9 +75,8 @@
 
 	var parser = document.createElement('a');
 	parser.href = window.location.href;
-	console.log(parser.pathname);
 
-	var page = parser.pathname == '/me' ? _react2.default.createElement(_Me2.default, null) : _react2.default.createElement(_Home2.default, null);
+	var page = parser.hash == '#me' ? _react2.default.createElement(_Me2.default, null) : _react2.default.createElement(_Home2.default, null);
 
 	_reactDom2.default.render(page, document.getElementById('stapp'));
 
