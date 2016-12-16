@@ -7,8 +7,7 @@ import Home from "./components/Home"
 
 let parser = document.createElement('a')
 parser.href = window.location.href
-console.log(parser.pathname)
-
-let page = (parser.pathname == '/me') ? <Me/> : <Home/>
+console.log(parser.hash);
+let page = (parser.hash == '#me') ? <Me/> : <Home/>
 
 ReactDOM.render(page, document.getElementById('stapp'))
