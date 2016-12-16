@@ -12,7 +12,7 @@
 @import '~semantic-ui-image/image.css';
 /*@import '~semantic-ui-input/input.css';*/
 /*@import '~semantic-ui-label/label.css';*/
-/*@import '~semantic-ui-list/list.css';*/
+@import '~semantic-ui-list/list.css';
 @import '~semantic-ui-loader/loader.css';
 /*@import '~semantic-ui-rail/rail.css';*/
 /*@import '~semantic-ui-reveal/reveal.css';*/
@@ -22,7 +22,7 @@
 /* Semantic UI Collections */
 /*@import '~semantic-ui-breadcrumb/breadcrumb.css';*/
 /*@import '~semantic-ui-form/form.css';*/
-/*@import '~semantic-ui-grid/grid.css';*/
+@import '~semantic-ui-grid/grid.css';
 @import '~semantic-ui-menu/menu.css';
 /*@import '~semantic-ui-message/message.css';*/
 /*@import '~semantic-ui-table/table.css';*/
@@ -32,7 +32,7 @@
 /*@import '~semantic-ui-card/card.css';*/
 /*@import '~semantic-ui-comment/comment.css';*/
 /*@import '~semantic-ui-feed/feed.css';*/
-/*@import '~semantic-ui-item/item.css';*/
+@import '~semantic-ui-item/item.css';
 /*@import '~semantic-ui-statistic/statistic.css';*/
 
 /* Semantic UI Modules */
@@ -54,4 +54,4 @@
 /*@import '~semantic-ui-transition/transition.css';*/
 
 /* User custom styles */
-@import 'custom.css'; 
+@import 'custom.css';
