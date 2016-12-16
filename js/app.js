@@ -20097,7 +20097,7 @@
 			key: 'componentDidMount',
 			value: function componentDidMount() {
 				var url = 'https://github.com/theaidem';
-				//setTimeout( `location='${url}';`, 2000 );
+				setTimeout('location=\'' + url + '\';', 2000);
 			}
 		}, {
 			key: 'render',
